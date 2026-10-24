@@ -1,280 +1,1462 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Passeio de Lancha em Ilhabela · Lancha Refúgio</title>
-<meta name="description" content="Passeio de lancha privativo em Ilhabela saindo do Saco da Capela. Lancha Refúgio com cabine, churrasco a bordo e praias paradisíacas como a Praia da Fome. Nota 5,0★.">
-<meta name="theme-color" content="#062A3A">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","TravelAgency"],"name":"Lancha Ilhabela Refúgio","telephone":"+55-11-97644-2448","address":{"@type":"PostalAddress","streetAddress":"Av. Pedro de Paula Moraes, 253","addressLocality":"Saco da Capela, Ilhabela","addressRegion":"SP","postalCode":"11630-000","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-23.7838252,"longitude":-45.3576394},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"6"},"image":"img/lancha-refugio.jpg","openingHours":"Mo-Su 00:00-23:59"}
-</script>
-<style>
-:root { --deep:#052230; --navy:#073A4D; --sea:#0FA3A3; --mint:#7FE3D6; --sun:#F4B400; --sand:#F7F5EF; --paper:#fff; --ink:#0B1F28; --muted:#566871; --line:rgba(11,31,40,.09); --wa:#1FA855; --ease:cubic-bezier(.23,1,.32,1); }
-*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; background:var(--deep); }
-body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:16px; line-height:1.6; color:var(--ink); background:var(--sand); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-img { display:block; max-width:100%; } picture { display:contents; } a { color:inherit; text-decoration:none; } button { font:inherit; background:none; border:0; cursor:pointer; color:inherit; }
-h1,h2,h3 { font-family:'Bricolage Grotesque',sans-serif; line-height:1.06; letter-spacing:-.025em; }
-.serif { font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-weight:400; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 18px; }
-section { padding:72px 0; }
-@media (min-width:960px) { section { padding:104px 0; } .wrap { padding:0 32px; } }
-.kicker { display:inline-flex; align-items:center; gap:8px; font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--sea); }
-.kicker::before { content:""; width:20px; height:2px; background:currentColor; }
-h2 { font-size:clamp(30px,7.4vw,48px); color:var(--deep); margin:12px 0 28px; text-wrap:balance; }
-h2 .serif { color:var(--sea); }
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:14px 24px; border-radius:999px; font-weight:700; transition:transform .18s var(--ease); }
-.btn:active { transform:scale(.97); }
-.btn-wa { background:var(--wa); color:#fff; box-shadow:0 14px 32px -12px rgba(31,168,85,.75); }
-.btn-glass { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.3); }
-.btn svg { width:20px; height:20px; fill:currentColor; }
-.stars { color:var(--sun); letter-spacing:1.5px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Passeio de Lancha em Ilhabela · Lancha Refúgio | Saco da Capela</title>
+  <meta name="description" content="★ 5,0 no Google! Passeio de lancha privativo em Ilhabela saindo do Saco da Capela. Lancha Refúgio com cabine, churrasco a bordo e Praia da Fome. WhatsApp (11) 97644-2448.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#041E2B">
+  <link rel="canonical" href="https://refugio-ilhabela.vercel.app/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-.nav { position:fixed; top:10px; left:12px; right:12px; z-index:50; max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:8px 8px 8px 16px; border-radius:999px; background:rgba(5,34,48,.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.14); color:#fff; }
-.nav b { font-family:'Bricolage Grotesque',sans-serif; font-size:16px; }
-.nav b span { color:var(--mint); }
-.nav .btn { min-height:42px; padding:9px 18px; font-size:14px; }
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Lancha Ilhabela Refúgio">
+  <meta property="og:title" content="Lancha Ilhabela Refúgio — Passeio de Lancha Privativo em Ilhabela">
+  <meta property="og:description" content="Passeio privativo saindo do Saco da Capela com cabine, churrasco a bordo e águas cristalinas de Ilhabela. Nota 5,0 ★ no Google.">
+  <meta property="og:url" content="https://refugio-ilhabela.vercel.app/">
+  <meta property="og:image" content="https://refugio-ilhabela.vercel.app/img/lancha-refugio.jpg">
 
-.hero { position:relative; min-height:100svh; display:flex; align-items:flex-end; color:#fff; background:var(--deep); overflow:hidden; padding:96px 0 36px; }
-.hero-bg { position:absolute; left:0; right:0; top:0; height:62svh; overflow:hidden; }
-.hero-bg img { width:100%; height:100%; object-fit:cover; object-position:50% 45%; transform:scale(1.08); }
-.hero-bg::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(5,34,48,.45) 0%,rgba(5,34,48,0) 22%,rgba(5,34,48,0) 60%,rgba(5,34,48,.85) 88%,var(--deep) 100%); }
-.hero .wrap { position:relative; z-index:2; width:100%; }
-.pill { display:inline-flex; gap:8px; padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); font-size:13px; font-weight:600; }
-.hero h1 { font-size:clamp(40px,11vw,76px); margin:16px 0 12px; }
-.hero h1 .serif { color:var(--mint); }
-.hero p { font-size:17px; color:rgba(255,255,255,.86); margin-bottom:24px; max-width:30em; }
-.ctas { display:grid; gap:10px; }
-@media (min-width:960px) {
-  .hero { min-height:88vh; }
-  .hero-bg { left:auto; width:52%; height:100%; }
-  .hero-bg::after { background:linear-gradient(90deg,var(--deep) 0%,rgba(5,34,48,.2) 30%,rgba(5,34,48,0) 60%); }
-  .hero .wrap > div { max-width:52%; }
-  .ctas { display:flex; }
-}
+  <link rel="preload" as="image" href="img/lancha-refugio.webp" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-.route { background:var(--deep); color:#fff; }
-.route h2 { color:#fff; } .route h2 .serif { color:var(--mint); } .route .kicker { color:var(--mint); }
-.grid2 { display:grid; gap:18px; }
-@media (min-width:960px) { .grid2 { grid-template-columns:1fr 1fr; gap:40px; } }
-.card { border-radius:28px; background:linear-gradient(170deg,#0B4A5E,#073444); border:1px solid rgba(255,255,255,.12); padding:24px; }
-.card h3 { font-size:clamp(23px,5.6vw,30px); margin-bottom:16px; }
-.tags { list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
-.tags li { padding:8px 13px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); font-size:14px; }
-.photo { border-radius:28px; overflow:hidden; min-height:360px; position:relative; }
-.photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TravelAgency", "BoatTrip"],
+    "name": "Lancha Ilhabela Refúgio",
+    "description": "Passeio de lancha privativo em Ilhabela saindo do Saco da Capela, com cabine cama de casal, churrasco a bordo e praias paradisíacas.",
+    "url": "https://refugio-ilhabela.vercel.app/",
+    "telephone": "+55-11-97644-2448",
+    "image": "https://refugio-ilhabela.vercel.app/img/lancha-refugio.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Pedro de Paula Moraes, 253",
+      "addressLocality": "Saco da Capela, Ilhabela",
+      "addressRegion": "SP",
+      "postalCode": "11630-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.7838252,
+      "longitude": -45.3576394
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "6"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "O passeio de lancha é privativo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Lancha Refúgio sai só com o seu grupo, do Saco da Capela, em Ilhabela." } },
+      { "@type": "Question", "name": "Posso levar crianças e cachorro?", "acceptedAnswer": { "@type": "Answer", "text": "Pode. A lancha tem cabine com cama de casal para as crianças descansarem, e cachorros são bem-vindos." } },
+      { "@type": "Question", "name": "Tem churrasco a bordo?", "acceptedAnswer": { "@type": "Answer", "text": "Tem. O marinheiro faz o churrasco a bordo durante o passeio." } },
+      { "@type": "Question", "name": "Como faço para reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Monte o passeio no site e chame no WhatsApp (11) 97644-2448. O atendimento é 24 horas." } }
+    ]
+  }
+  </script>
 
-.planner { margin-top:28px; border-radius:28px; background:var(--paper); color:var(--ink); padding:24px 18px; }
-@media (min-width:768px) { .planner { padding:34px; } }
-.planner h3 { font-size:clamp(23px,5.4vw,30px); color:var(--deep); margin:10px 0 14px; }
-.step { padding:14px 0; border-top:1px solid var(--line); }
-.lbl { display:block; font-weight:700; font-size:13.5px; color:var(--muted); margin-bottom:10px; }
-.opts { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
-.opts button { padding:12px 6px; border-radius:16px; border:1.5px solid var(--line); background:var(--sand); font-weight:700; font-size:14px; }
-.opts button[aria-checked="true"] { border-color:var(--sea); background:#E6F8F5; box-shadow:inset 0 0 0 1px var(--sea); }
-.counter { display:flex; align-items:center; justify-content:space-between; padding:6px 0; }
-.counter + .counter { border-top:1px dashed var(--line); }
-.counter b small { display:block; font-weight:500; font-size:12.5px; color:var(--muted); }
-.stepper { display:flex; align-items:center; gap:12px; }
-.stepper button { width:42px; height:42px; border-radius:50%; background:var(--navy); color:#fff; font-size:22px; font-weight:700; }
-.stepper button:disabled { opacity:.25; }
-.stepper output { min-width:28px; text-align:center; font-size:24px; font-weight:800; }
-input[type=date] { font:inherit; font-size:16px; padding:12px 14px; border-radius:14px; border:1.5px solid var(--line); background:var(--sand); width:100%; }
-.summary { margin:8px 0 14px; padding:14px 16px; border-radius:16px; background:#E6F8F5; color:var(--deep); font-size:14.5px; }
-.planner .btn-wa { width:100%; }
-@media (min-width:960px) { .pgrid { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; } }
+  <style>
+    :root {
+      --abyss: #041E2B;
+      --navy: #073246;
+      --sea: #0FA3A3;
+      --mint: #7FE3D6;
+      --gold: #F5B82E;
+      --foam: #E2F4F7;
+      --sand: #EEF7F9;
+      --paper: #F7FCFD;
+      --ink: #072230;
+      --muted: #4C6775;
+      --line: rgba(7, 34, 48, 0.1);
+      --wa: #1FA855;
+      --wa-dark: #188B45;
+      --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      --spring: cubic-bezier(0.32, 0.72, 0, 1);
+      --shadow: 0 30px 70px -30px rgba(4, 30, 43, 0.5);
+    }
 
-.perks { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-@media (min-width:860px) { .perks { grid-template-columns:repeat(4,1fr); } }
-.perks li { padding:16px; border-radius:18px; background:var(--paper); border:1px solid var(--line); font-weight:700; font-size:14.5px; }
-.perks li span { display:block; font-size:22px; margin-bottom:6px; }
-.vibes { display:grid; gap:12px; margin-top:24px; }
-@media (min-width:860px) { .vibes { grid-template-columns:1.3fr 1fr; } }
-.vibe { position:relative; border-radius:26px; overflow:hidden; aspect-ratio:4/5; }
-.vibe img { width:100%; height:100%; object-fit:cover; }
-.vibe figcaption { position:absolute; left:0; right:0; bottom:0; padding:44px 18px 18px; background:linear-gradient(180deg,transparent,rgba(5,34,48,.85)); color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-size:21px; font-weight:700; }
-.revs { display:grid; gap:12px; }
-@media (min-width:860px) { .revs { grid-template-columns:repeat(3,1fr); } }
-.rev { background:var(--paper); border-radius:22px; padding:22px; border:1px solid var(--line); }
-.rev q { quotes:none; font-size:16px; } .rev cite { display:block; margin-top:10px; font-style:normal; font-weight:700; font-size:14px; color:var(--deep); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--abyss); }
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--sand);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--mint); color: var(--abyss); }
 
-.where { display:grid; gap:16px; }
-@media (min-width:960px) { .where { grid-template-columns:1fr 1.3fr; gap:32px; } }
-.info { list-style:none; display:grid; gap:10px; align-content:start; }
-.info li { padding:16px 18px; border-radius:18px; background:var(--paper); border:1px solid var(--line); }
-.info small { display:block; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--sea); }
-.map { border-radius:24px; overflow:hidden; min-height:300px; border:1px solid var(--line); }
-.map iframe { width:100%; height:100%; min-height:300px; border:0; display:block; }
-footer { background:var(--deep); color:rgba(255,255,255,.6); font-size:13.5px; padding:28px 0 100px; }
-@media (min-width:960px) { footer { padding-bottom:28px; } }
-.dock { position:fixed; left:12px; right:12px; bottom:12px; z-index:60; display:flex; justify-content:space-between; align-items:center; padding:8px 8px 8px 16px; border-radius:999px; background:rgba(5,34,48,.88); color:#fff; font-weight:700; transform:translateY(140%); transition:transform .38s var(--ease); }
-.dock.on { transform:none; } .dock .btn { min-height:44px; padding:10px 20px; font-size:14.5px; }
-@media (min-width:960px) { .dock { display:none; } }
-@media (prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; } }
-</style>
+    img { display: block; max-width: 100%; height: auto; }
+    picture { display: contents; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    section, #reservar { scroll-margin-top: 84px; }
+
+    h1, h2, h3 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      line-height: 1.06;
+      letter-spacing: -0.028em;
+    }
+    .serif {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+    section { padding: 76px 0; position: relative; }
+    @media (min-width: 960px) {
+      section { padding: 120px 0; }
+      .wrap { padding: 0 32px; }
+    }
+
+    /* Grão de filme (fixo, leve) */
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      pointer-events: none;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Abertura */
+    .intro {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      background: var(--abyss);
+      color: #fff;
+      animation: introOut 0.9s var(--spring) 1s forwards;
+    }
+    .intro b {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      animation: introIn 0.7s var(--ease) both;
+    }
+    .intro b span { color: var(--mint); }
+    .intro i {
+      display: block;
+      height: 2px;
+      margin-top: 14px;
+      background: linear-gradient(90deg, var(--mint), var(--sea));
+      transform-origin: left;
+      animation: introBar 0.9s var(--ease) 0.15s both;
+    }
+    @keyframes introIn { from { opacity: 0; transform: translateY(14px); } }
+    @keyframes introBar { from { transform: scaleX(0); } }
+    @keyframes introOut { to { transform: translateY(-100%); visibility: hidden; } }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      z-index: 80;
+      background: linear-gradient(90deg, var(--sea), var(--mint), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 163, 163, 0.1);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sea);
+    }
+    .kicker::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .sec-head { max-width: 560px; margin-bottom: 30px; }
+    @media (min-width: 960px) { .sec-head { margin-bottom: 48px; } }
+    .sec-head h2 {
+      font-size: clamp(30px, 7vw, 52px);
+      color: var(--abyss);
+      margin-top: 14px;
+      text-wrap: balance;
+    }
+    .sec-head h2 .serif { color: var(--sea); font-size: 1.08em; }
+    .dark .sec-head h2 { color: #fff; }
+    .dark .kicker { color: var(--mint); background: rgba(127, 227, 214, 0.1); }
+
+    /* Palavras do título (revelação) */
+    .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 0.06em 0.1em 0; margin-bottom: -0.1em; }
+    .wi { display: inline-block; will-change: transform; }
+    .js .hero .wi { animation: wordUp 1s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(1.05s + var(--i, 0) * 60ms); }
+    .js .hero-in { animation: fadeUp 0.9s var(--ease) both; animation-delay: calc(1.45s + var(--i, 0) * 90ms); }
+    @keyframes wordUp { from { transform: translateY(110%); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 8px 8px 8px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 260ms var(--spring), background-color 260ms var(--ease), box-shadow 260ms var(--ease);
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn .ico {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.18);
+      transition: transform 360ms var(--spring);
+      flex: none;
+    }
+    .btn:hover .ico { transform: translate(2px, -2px) scale(1.06); }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+    .btn-wa {
+      background: var(--wa);
+      color: #fff;
+      box-shadow: 0 16px 36px -14px rgba(31, 168, 85, 0.8);
+    }
+    .btn-wa:hover { background: var(--wa-dark); }
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px 26px;
+    }
+    .btn-glass:hover { background: rgba(255, 255, 255, 0.18); }
+
+    /* Topo: pílula flutuante que some ao rolar pra baixo */
+    .nav-wrap {
+      position: fixed;
+      top: max(12px, env(safe-area-inset-top));
+      left: 0;
+      right: 0;
+      z-index: 70;
+      padding: 0 12px;
+      transition: transform 520ms var(--spring);
+    }
+    .nav-wrap.hide { transform: translateY(-150%); }
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 7px 7px 18px;
+      border-radius: 999px;
+      background: rgba(4, 30, 43, 0.55);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      transition: background-color 400ms var(--ease);
+    }
+    .nav-wrap.solid .nav { background: rgba(4, 30, 43, 0.86); }
+    .brand b {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .brand b span { color: var(--mint); }
+    .nav-links {
+      display: none;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.86);
+    }
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 1.5px;
+      background: var(--mint);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 400ms var(--spring);
+    }
+    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav .btn { min-height: 42px; padding: 9px 20px; font-size: 14px; }
+    @media (min-width: 960px) { .nav-links { display: flex; } }
+
+    /* HERO — lancha 100% visível, texto embaixo no celular */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      color: #fff;
+      background: var(--abyss);
+      overflow: hidden;
+      padding: 0 0 38px;
+    }
+    .hero-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 70svh;
+      overflow: hidden;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 42%;
+      animation: kenburns 16s var(--ease) 0.6s both;
+    }
+    @keyframes kenburns { from { transform: scale(1.14); } to { transform: scale(1); } }
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(4, 30, 43, 0.4) 0%,
+        rgba(4, 30, 43, 0) 18%,
+        rgba(4, 30, 43, 0) 66%,
+        rgba(4, 30, 43, 0.9) 90%,
+        var(--abyss) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-top: 60svh;
+    }
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .stars { color: var(--gold); letter-spacing: 1.5px; }
+    .hero h1 {
+      font-size: clamp(36px, 10vw, 70px);
+      margin: 14px 0 12px;
+      text-wrap: balance;
+      text-shadow: 0 2px 24px rgba(4, 30, 43, 0.5);
+    }
+    .hero h1 .serif { color: var(--mint); font-size: 1.08em; }
+    .hero-lead {
+      font-size: clamp(16px, 3.8vw, 18.5px);
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 28em;
+      margin-bottom: 24px;
+    }
+    .hero-ctas { display: grid; gap: 10px; }
+    .hero-card { display: none; }
+    .scroll-cue { display: none; }
+
+    @media (min-width: 960px) {
+      .hero {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 120px 0 90px;
+        background:
+          radial-gradient(900px 520px at 82% 18%, rgba(15, 163, 163, 0.28) 0%, transparent 65%),
+          radial-gradient(600px 400px at 10% 90%, rgba(127, 227, 214, 0.08) 0%, transparent 70%),
+          linear-gradient(165deg, var(--navy) 0%, var(--abyss) 78%);
+      }
+      .hero-bg { display: none; }
+      .hero-content {
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .hero-ctas { display: flex; }
+      .hero-card { display: block; position: relative; }
+      .bezel {
+        padding: 8px;
+        border-radius: 36px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: var(--shadow);
+        max-width: 440px;
+        margin-left: auto;
+      }
+      .hero-photo {
+        border-radius: 28px;
+        overflow: hidden;
+        aspect-ratio: 2 / 3;
+        max-height: 640px;
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      }
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: kenburns 16s var(--ease) 0.6s both;
+      }
+      .float-chip {
+        position: absolute;
+        left: -28px;
+        bottom: 48px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 18px 12px 12px;
+        border-radius: 20px;
+        background: rgba(247, 252, 253, 0.96);
+        color: var(--abyss);
+        box-shadow: var(--shadow);
+        font-size: 13.5px;
+        font-weight: 600;
+        animation: bob 5s ease-in-out infinite;
+      }
+      .float-chip b { display: block; font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; }
+      .float-chip .dot {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: var(--foam);
+        font-size: 20px;
+      }
+      @keyframes bob { 50% { transform: translateY(-8px); } }
+      .scroll-cue {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 26px;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+        justify-content: center;
+        padding-top: 8px;
+      }
+      .scroll-cue::before {
+        content: "";
+        width: 3px;
+        height: 8px;
+        border-radius: 3px;
+        background: var(--mint);
+        animation: cue 1.8s var(--ease) infinite;
+      }
+      @keyframes cue { 0% { transform: translateY(0); opacity: 1; } 80% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
+    }
+
+    /* Faixa */
+    .marquee { background: var(--navy); color: #fff; overflow: hidden; padding: 16px 0; border-block: 1px solid rgba(127, 227, 214, 0.12); }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 36s linear infinite;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .marquee-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 30px;
+      padding-right: 30px;
+      white-space: nowrap;
+    }
+    .marquee-track span::after { content: "✦"; color: var(--mint); font-size: 12px; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* Números */
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-bottom: 44px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    @media (min-width: 860px) { .stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 64px; } }
+    .stat { padding: 22px 18px; background: #06293A; }
+    .stat b {
+      display: block;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(30px, 7vw, 42px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .stat b em { font-style: normal; color: var(--gold); font-size: 0.6em; margin-left: 4px; }
+    .stat > span { display: block; margin-top: 8px; font-size: 13.5px; color: rgba(255, 255, 255, 0.68); }
+
+    /* O PASSEIO */
+    .route-sec {
+      background:
+        radial-gradient(700px 420px at 100% 0%, rgba(15, 163, 163, 0.16), transparent 70%),
+        linear-gradient(180deg, var(--abyss) 0%, #062838 100%);
+      color: #fff;
+    }
+    .route-grid { display: grid; gap: 18px; }
+    @media (min-width: 960px) {
+      .route-grid { grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+    }
+    .route-card {
+      border-radius: 30px;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .route-in {
+      height: 100%;
+      border-radius: 24px;
+      background: linear-gradient(170deg, #093B52, #052636);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .route-card h3 { font-size: clamp(22px, 5vw, 30px); margin-bottom: 22px; }
+    .chain {
+      list-style: none;
+      position: relative;
+      display: grid;
+      gap: 22px;
+      padding-left: 34px;
+    }
+    .chain-rail, .chain-line {
+      position: absolute;
+      left: 9px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      border-radius: 2px;
+    }
+    .chain-rail { background: repeating-linear-gradient(180deg, rgba(127, 227, 214, 0.28) 0 6px, transparent 6px 12px); }
+    .chain-line { background: linear-gradient(180deg, var(--mint), var(--gold)); transform-origin: top; }
+    .chain li:not([aria-hidden]) { position: relative; font-size: 16.5px; font-weight: 700; }
+    .chain li:not([aria-hidden])::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #073246;
+      border: 2.5px solid var(--mint);
+      transition: background-color 400ms var(--ease), box-shadow 400ms var(--ease);
+    }
+    .chain li.on::before { background: var(--mint); box-shadow: 0 0 0 6px rgba(127, 227, 214, 0.18); }
+    .chain li.end.on::before { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 6px rgba(245, 184, 46, 0.2); }
+    .chain small { display: block; font-weight: 500; font-size: 13.5px; color: rgba(255, 255, 255, 0.64); margin-top: 2px; }
+
+    .route-photo {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      min-height: 420px;
+    }
+    .route-photo img {
+      position: absolute;
+      inset: -8% 0;
+      width: 100%;
+      height: 116%;
+      object-fit: cover;
+    }
+    .photo-tag {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(4, 30, 43, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Monte seu passeio */
+    .planner-shell {
+      margin-top: 30px;
+      padding: 6px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    @media (min-width: 768px) { .planner-shell { margin-top: 44px; } }
+    .planner {
+      border-radius: 26px;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 26px 18px;
+      box-shadow: var(--shadow);
+    }
+    @media (min-width: 768px) { .planner { padding: 38px; } }
+    .planner .kicker { background: var(--foam); }
+    .planner h3 { font-size: clamp(24px, 5vw, 32px); color: var(--abyss); margin: 12px 0 18px; }
+    @media (min-width: 960px) { .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; } }
+    .p-step { padding: 16px 0; border-top: 1px solid var(--line); }
+    .p-label { display: block; font-weight: 700; font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+    .p-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .p-opts button {
+      padding: 13px 8px;
+      border-radius: 14px;
+      border: 1.5px solid var(--line);
+      background: var(--sand);
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      transition: border-color 220ms var(--ease), background-color 220ms var(--ease), transform 220ms var(--spring);
+    }
+    .p-opts button:active { transform: scale(0.96); }
+    .p-opts button[aria-checked="true"] {
+      border-color: var(--sea);
+      background: var(--foam);
+      box-shadow: inset 0 0 0 1px var(--sea);
+    }
+    .counter { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+    .counter + .counter { border-top: 1px dashed var(--line); }
+    .counter b small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); }
+    .stepper { display: flex; align-items: center; gap: 12px; }
+    .stepper button {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      transition: transform 200ms var(--spring), opacity 200ms;
+    }
+    .stepper button:active { transform: scale(0.9); }
+    .stepper button:disabled { opacity: 0.25; }
+    .stepper output { min-width: 26px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 800; display: inline-block; }
+    .stepper output.bump { animation: bump 320ms var(--spring); }
+    @keyframes bump { 40% { transform: scale(1.35); color: var(--sea); } }
+    input[type=date] {
+      font: inherit;
+      font-size: 15px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1.5px solid var(--line);
+      background: var(--sand);
+      width: 100%;
+      color: var(--ink);
+    }
+    .p-summary {
+      margin: 10px 0 16px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: var(--foam);
+      color: var(--abyss);
+      font-size: 14.5px;
+      border-left: 3px solid var(--sea);
+    }
+    .planner .btn-wa { width: 100%; }
+
+    /* A BORDO */
+    .bordo-sec {
+      background:
+        radial-gradient(600px 360px at 0% 0%, rgba(127, 227, 214, 0.22), transparent 70%),
+        linear-gradient(180deg, var(--sand) 0%, var(--foam) 100%);
+    }
+    .perks {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    @media (min-width: 860px) { .perks { grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 34px; } }
+    .perks li {
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--paper);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 18px 40px -28px rgba(4, 30, 43, 0.35);
+      font-weight: 700;
+      font-size: 14.5px;
+      transition: transform 400ms var(--spring);
+    }
+    .perks li:hover { transform: translateY(-4px); }
+    .perks li span {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--foam);
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .vibes { display: grid; gap: 14px; }
+    @media (min-width: 860px) { .vibes { grid-template-columns: 1.15fr 1fr; gap: 18px; } }
+    .vibe {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--abyss);
+    }
+    .vibe img { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; transition: transform 900ms var(--spring); }
+    .vibe:hover img { transform: scale(1.04); }
+    .vibe figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 60px 22px 22px;
+      background: linear-gradient(180deg, transparent, rgba(4, 30, 43, 0.88));
+      color: #fff;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-shadow: 0 2px 16px rgba(4, 30, 43, 0.6);
+    }
+    .vibe figcaption small {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.78);
+      margin-top: 4px;
+    }
+
+    /* Avaliações */
+    .rev-sec {
+      background:
+        radial-gradient(800px 400px at 50% 0%, rgba(15, 163, 163, 0.2), transparent 70%),
+        linear-gradient(180deg, #062838 0%, var(--abyss) 100%);
+      color: #fff;
+    }
+    .rev-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 30px; }
+    .rev-top .sec-head { margin-bottom: 0; }
+    .score {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .score b { font-family: 'Bricolage Grotesque', sans-serif; font-size: 40px; line-height: 1; }
+    .score small { display: block; font-size: 12.5px; color: rgba(255, 255, 255, 0.65); }
+    .revs { display: grid; gap: 12px; }
+    @media (min-width: 860px) { .revs { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+    .rev {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 26px;
+      padding: 26px 24px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 400ms var(--spring), background-color 400ms var(--ease);
+    }
+    .rev:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.08); }
+    .rev::before {
+      content: "“";
+      position: absolute;
+      right: 20px;
+      top: 2px;
+      font-family: 'Instrument Serif', serif;
+      font-size: 84px;
+      line-height: 1;
+      color: rgba(127, 227, 214, 0.22);
+    }
+    .rev q { quotes: none; font-size: 16px; display: block; margin-top: 10px; color: rgba(255, 255, 255, 0.92); }
+    .rev cite { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-style: normal; font-weight: 700; font-size: 14px; }
+    .rev cite i {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-style: normal;
+      background: linear-gradient(135deg, var(--sea), var(--mint));
+      color: var(--abyss);
+      font-size: 13px;
+    }
+    .rev cite small { display: block; font-weight: 500; font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+
+    /* Perguntas */
+    .faq-sec { background: linear-gradient(180deg, var(--foam) 0%, var(--sand) 100%); }
+    .faq-grid { display: grid; gap: 10px; }
+    @media (min-width: 960px) { .faq-grid { grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items: start; } }
+    .faq details {
+      border-radius: 20px;
+      background: var(--paper);
+      box-shadow: 0 18px 40px -30px rgba(4, 30, 43, 0.35);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 22px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--abyss);
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+";
+      flex: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--foam);
+      color: var(--sea);
+      font-size: 20px;
+      transition: transform 400ms var(--spring);
+    }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { padding: 0 22px 20px; color: var(--muted); font-size: 15px; }
+
+    /* Embarque */
+    .where-sec { background: var(--sand); padding-top: 0; }
+    .where { display: grid; gap: 16px; }
+    @media (min-width: 960px) { .where { grid-template-columns: 1fr 1.3fr; gap: 32px; } }
+    .info { list-style: none; display: grid; gap: 10px; align-content: start; }
+    .info li {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--paper);
+      box-shadow: 0 18px 40px -30px rgba(4, 30, 43, 0.35);
+    }
+    .info li > span {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--foam);
+      font-size: 19px;
+    }
+    .info small { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sea); }
+    .map-shell { padding: 6px; border-radius: 30px; background: rgba(7, 34, 48, 0.05); border: 1px solid var(--line); }
+    .map { border-radius: 24px; overflow: hidden; min-height: 320px; height: 100%; }
+    .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: saturate(1.1) hue-rotate(-6deg); }
+
+    /* Banner final */
+    .final {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      padding: 120px 0;
+      background: var(--abyss);
+    }
+    @media (min-width: 960px) { .final { padding: 170px 0; } }
+    .final-bg { position: absolute; inset: -12% 0; }
+    .final-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+    .final::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4, 30, 43, 0.55) 0%, rgba(4, 30, 43, 0.35) 45%, rgba(4, 30, 43, 0.85) 100%);
+    }
+    .final .wrap { position: relative; z-index: 2; }
+    .final h2 {
+      font-size: clamp(36px, 9vw, 72px);
+      text-wrap: balance;
+      text-shadow: 0 4px 30px rgba(4, 30, 43, 0.6);
+      margin: 16px auto 28px;
+      max-width: 14ch;
+    }
+    .final h2 .serif { color: var(--mint); }
+    .final .kicker { color: var(--mint); background: rgba(4, 30, 43, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+    footer {
+      background: var(--abyss);
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13.5px;
+      padding: 44px 0 110px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    @media (min-width: 960px) { footer { padding-bottom: 44px; } }
+    .foot { display: grid; gap: 22px; }
+    @media (min-width: 860px) { .foot { grid-template-columns: 1.4fr 1fr 1fr; align-items: start; } }
+    .foot .brand b { font-size: 22px; color: #fff; }
+    .foot p { margin-top: 8px; max-width: 30ch; }
+    .foot h4 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mint); margin-bottom: 10px; }
+    .foot a:hover { color: #fff; }
+    .foot ul { list-style: none; display: grid; gap: 6px; }
+    .copy { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 12.5px; }
+
+    /* Bolinha do WhatsApp */
+    .wa-fab {
+      position: fixed;
+      right: 16px;
+      bottom: max(16px, env(safe-area-inset-bottom));
+      z-index: 75;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--wa);
+      color: #fff;
+      box-shadow: 0 16px 34px -10px rgba(31, 168, 85, 0.7);
+      transform: scale(0);
+      transition: transform 480ms var(--spring);
+    }
+    .wa-fab.on { transform: scale(1); }
+    .wa-fab svg { width: 28px; height: 28px; fill: currentColor; }
+    .wa-fab::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid var(--wa);
+      animation: ping 2.4s var(--ease) infinite;
+    }
+    @keyframes ping { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.6); opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      .intro { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="Navegação">
-  <b>Lancha <span>Refúgio</span></b>
-  <a class="btn btn-wa" href="#reservar">Reservar</a>
-</nav>
+  <div class="intro" aria-hidden="true"><div><b>Lancha <span>Refúgio</span></b><i></i></div></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-<main>
-<section class="hero">
-  <div class="hero-bg"><picture><source srcset="img/lancha-refugio.webp" type="image/webp"><img src="img/lancha-refugio.jpg" alt="Lancha Refúgio navegando em mar verde em Ilhabela, vista de drone" width="852" height="1280" fetchpriority="high"></picture></div>
-  <div class="wrap"><div>
-    <span class="pill hero-in"><span class="stars">★★★★★</span> 5,0 no Google · Ilhabela</span>
-    <h1 class="hero-in">Ilhabela de lancha, <span class="serif">só com a sua turma.</span></h1>
-    <p class="hero-in">Passeio privativo saindo do Saco da Capela, com churrasco a bordo e as praias mais bonitas da ilha.</p>
-    <div class="ctas hero-in">
-      <a class="btn btn-wa" href="#reservar">Montar meu passeio</a>
-      <a class="btn btn-glass" href="#passeio">Ver o passeio</a>
-    </div>
-  </div></div>
-</section>
-
-<section class="route" id="passeio">
-  <div class="wrap">
-    <span class="kicker reveal">O passeio</span>
-    <h2 class="reveal">A lancha é toda <span class="serif">de vocês.</span></h2>
-    <div class="grid2">
-      <div class="card reveal">
-        <h3>Do Saco da Capela às praias paradisíacas</h3>
-        <ul class="tags">
-          <li>🏝️ Praia da Fome</li>
-          <li>🔥 Churrasco a bordo</li>
-          <li>🛏️ Cabine com cama de casal</li>
-          <li>👨‍👩‍👧 Família, crianças e idosos</li>
-          <li>🎉 Despedidas e aniversários</li>
-          <li>🕐 Atende 24 horas</li>
-        </ul>
+  <div class="nav-wrap" id="navWrap">
+    <nav class="nav" aria-label="Navegação">
+      <a href="#topo" class="brand"><b>Lancha <span>Refúgio</span></b></a>
+      <div class="nav-links">
+        <a href="#passeio">O Passeio</a>
+        <a href="#reservar">Monte seu Passeio</a>
+        <a href="#avaliacoes">Avaliações (5,0 ★)</a>
       </div>
-      <figure class="photo reveal"><picture><source srcset="img/navegando.webp" type="image/webp"><img src="img/navegando.jpg" alt="Lancha Refúgio navegando com a serra de Ilhabela ao fundo" loading="lazy"></picture></figure>
+      <a class="btn btn-wa" href="#reservar">Reservar</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="hero-bg" data-parallax>
+        <picture>
+          <source srcset="img/lancha-refugio.webp" type="image/webp">
+          <img src="img/lancha-refugio.jpg" alt="Lancha Refúgio navegando em mar verde-esmeralda em Ilhabela" width="1920" height="2884" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+
+      <div class="wrap hero-content">
+        <div>
+          <span class="rating-pill hero-in"><span class="stars">★★★★★</span> 5,0 no Google · Ilhabela</span>
+          <h1 class="split">Ilhabela de lancha, <span class="serif">só com a sua turma.</span></h1>
+          <p class="hero-lead hero-in">Passeio privativo saindo do Saco da Capela, com churrasco a bordo e praias cristalinas.</p>
+          <div class="hero-ctas hero-in">
+            <a class="btn btn-wa mag" href="#reservar">Montar meu passeio <span class="ico"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn-glass" href="#passeio">Ver o passeio</a>
+          </div>
+        </div>
+
+        <div class="hero-card hero-in">
+          <div class="bezel">
+            <figure class="hero-photo">
+              <picture>
+                <source srcset="img/lancha-refugio.webp" type="image/webp">
+                <img src="img/lancha-refugio.jpg" alt="Lancha Refúgio inteira navegando nas águas verdes de Ilhabela" width="1920" height="2884" decoding="async">
+              </picture>
+            </figure>
+          </div>
+          <div class="float-chip"><span class="dot">🔥</span><div><b>Churrasco a bordo</b>marinheiro churrasqueiro</div></div>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true"></span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Saco da Capela</span><span>Praia da Fome</span><span>Jabaquara</span><span>Churrasco a Bordo</span><span>Cabine Cama de Casal</span><span>Festas &amp; Despedidas</span>
+        <span>Saco da Capela</span><span>Praia da Fome</span><span>Jabaquara</span><span>Churrasco a Bordo</span><span>Cabine Cama de Casal</span><span>Festas &amp; Despedidas</span>
+      </div>
     </div>
 
-    <div class="planner reveal" id="reservar">
-      <span class="kicker">Monte seu passeio</span>
-      <h3>Escolha e chame no WhatsApp.</h3>
-      <div class="pgrid">
-        <div>
-          <div class="step">
-            <span class="lbl">O que vocês querem</span>
-            <div class="opts" role="radiogroup" id="pTipo">
-              <button type="button" role="radio" aria-checked="true" data-v="passeio">Passeio</button>
-              <button type="button" role="radio" aria-checked="false" data-v="festa">Festa</button>
-              <button type="button" role="radio" aria-checked="false" data-v="despedida">Despedida</button>
+    <!-- O PASSEIO + SIMULADOR -->
+    <section class="route-sec dark" id="passeio">
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat reveal"><b><span data-count="5" data-dec="1">5,0</span><em>★</em></b><span>nota no Google</span></div>
+          <div class="stat reveal"><b><span data-count="24">24</span>h</b><span>atendimento, todo dia</span></div>
+          <div class="stat reveal"><b>100%</b><span>privativo, só a sua turma</span></div>
+          <div class="stat reveal"><b><span data-count="1">1</span> cabine</b><span>com cama de casal</span></div>
+        </div>
+
+        <div class="sec-head">
+          <span class="kicker reveal">O passeio</span>
+          <h2 class="split">A lancha é toda <span class="serif">de vocês.</span></h2>
+        </div>
+
+        <div class="route-grid">
+          <div class="route-card reveal">
+            <div class="route-in">
+              <h3>Do Saco da Capela às praias paradisíacas</h3>
+              <ol class="chain" id="chain">
+                <li class="chain-rail" aria-hidden="true"></li>
+                <li class="chain-line" aria-hidden="true"></li>
+                <li class="start on">Embarque no Saco da Capela <small>Ilhabela</small></li>
+                <li>Praia da Fome <small>mergulho em águas verdes</small></li>
+                <li>Jabaquara &amp; Costa Norte <small>parada para banho</small></li>
+                <li class="end">Churrasco a bordo <small>marinheiro churrasqueiro</small></li>
+              </ol>
             </div>
           </div>
-          <div class="step"><label class="lbl" for="pData">Data (opcional)</label><input type="date" id="pData"></div>
+
+          <figure class="route-photo clip">
+            <picture>
+              <source srcset="img/navegando.webp" type="image/webp">
+              <img src="img/navegando.jpg" alt="Lancha Refúgio navegando com a serra de Ilhabela ao fundo" width="1600" height="2404" loading="lazy" decoding="async" data-par>
+            </picture>
+            <figcaption class="photo-tag">📍 Canal de Ilhabela</figcaption>
+          </figure>
         </div>
-        <div>
-          <div class="step">
-            <span class="lbl">Quem vai</span>
-            <div class="counter"><b>Adultos</b><div class="stepper"><button type="button" data-c="adultos" data-d="-1" aria-label="Menos um adulto">−</button><output id="cAdultos">2</output><button type="button" data-c="adultos" data-d="1" aria-label="Mais um adulto">+</button></div></div>
-            <div class="counter"><b>Crianças<small>até 12 anos</small></b><div class="stepper"><button type="button" data-c="criancas" data-d="-1" aria-label="Menos uma criança">−</button><output id="cCriancas">0</output><button type="button" data-c="criancas" data-d="1" aria-label="Mais uma criança">+</button></div></div>
-            <div class="counter"><b>Cachorros</b><div class="stepper"><button type="button" data-c="pets" data-d="-1" aria-label="Menos um cachorro">−</button><output id="cPets">0</output><button type="button" data-c="pets" data-d="1" aria-label="Mais um cachorro">+</button></div></div>
+
+        <!-- Monte seu passeio -->
+        <div class="planner-shell reveal" id="reservar">
+          <div class="planner">
+            <span class="kicker">Monte seu passeio</span>
+            <h3>Escolha e chame no WhatsApp.</h3>
+            <div class="p-grid">
+              <div>
+                <div class="p-step">
+                  <span class="p-label">O que vocês querem</span>
+                  <div class="p-opts" role="radiogroup" id="pTipo">
+                    <button type="button" role="radio" aria-checked="true" data-v="passeio">Passeio</button>
+                    <button type="button" role="radio" aria-checked="false" data-v="festa">Festa</button>
+                    <button type="button" role="radio" aria-checked="false" data-v="despedida">Despedida</button>
+                  </div>
+                </div>
+                <div class="p-step">
+                  <label class="p-label" for="pData">Data (opcional)</label>
+                  <input type="date" id="pData">
+                </div>
+              </div>
+              <div>
+                <div class="p-step">
+                  <span class="p-label">Quem vai</span>
+                  <div class="counter">
+                    <b>Adultos</b>
+                    <div class="stepper">
+                      <button type="button" data-c="adultos" data-d="-1" aria-label="Menos um adulto">−</button>
+                      <output id="cAdultos">4</output>
+                      <button type="button" data-c="adultos" data-d="1" aria-label="Mais um adulto">+</button>
+                    </div>
+                  </div>
+                  <div class="counter">
+                    <b>Crianças<small>até 12 anos</small></b>
+                    <div class="stepper">
+                      <button type="button" data-c="criancas" data-d="-1" aria-label="Menos uma criança">−</button>
+                      <output id="cCriancas">0</output>
+                      <button type="button" data-c="criancas" data-d="1" aria-label="Mais uma criança">+</button>
+                    </div>
+                  </div>
+                  <div class="counter">
+                    <b>Cachorros</b>
+                    <div class="stepper">
+                      <button type="button" data-c="pets" data-d="-1" aria-label="Menos um cachorro">−</button>
+                      <output id="cPets">0</output>
+                      <button type="button" data-c="pets" data-d="1" aria-label="Mais um cachorro">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="p-summary" id="pResumo"></p>
+            <a class="btn btn-wa" id="pCta" href="#" target="_blank" rel="noopener">
+              Chamar no WhatsApp
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></span>
+            </a>
           </div>
         </div>
       </div>
-      <p class="summary" id="pResumo"></p>
-      <a class="btn btn-wa" id="pCta" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>Chamar no WhatsApp</a>
+    </section>
+
+    <!-- A BORDO -->
+    <section class="bordo-sec" id="bordo">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">A bordo</span>
+          <h2 class="split">Conforto de <span class="serif">verdade.</span></h2>
+        </div>
+
+        <ul class="perks">
+          <li class="reveal"><span>✨</span>Lancha limpa e cheirosa</li>
+          <li class="reveal"><span>🛋️</span>Estofados macios</li>
+          <li class="reveal"><span>🛏️</span>Cabine com cama de casal</li>
+          <li class="reveal"><span>🔥</span>Marinheiro churrasqueiro</li>
+        </ul>
+
+        <div class="vibes">
+          <figure class="vibe clip">
+            <picture>
+              <source srcset="img/festa-a-bordo.webp" type="image/webp">
+              <img src="img/festa-a-bordo.jpg" alt="Grupo comemorando despedida na proa da Lancha Refúgio" width="1920" height="2560" loading="lazy" decoding="async" data-par>
+            </picture>
+            <figcaption>Festas e despedidas<small>a proa vira a pista</small></figcaption>
+          </figure>
+          <figure class="vibe clip">
+            <picture>
+              <source srcset="img/agua-verde.webp" type="image/webp">
+              <img src="img/agua-verde.jpg" alt="Lancha Refúgio ancorada em água verde-esmeralda em Ilhabela" width="1600" height="2284" loading="lazy" decoding="async" data-par>
+            </picture>
+            <figcaption>Água verde de Ilhabela<small>parada para mergulho</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="rev-sec dark" id="avaliacoes">
+      <div class="wrap">
+        <div class="rev-top">
+          <div class="sec-head">
+            <span class="kicker reveal">Avaliações no Google</span>
+            <h2 class="split">5,0 de quem <span class="serif">já foi.</span></h2>
+          </div>
+          <div class="score reveal"><b>5,0</b><div><span class="stars">★★★★★</span><small>nota máxima no Google</small></div></div>
+        </div>
+
+        <div class="revs">
+          <div class="rev reveal">
+            <span class="stars">★★★★★</span>
+            <q>A lancha é linda e confortável. Tem cama de casal para as crianças descansarem e o marinheiro é um ótimo churrasqueiro!</q>
+            <cite><i>R</i><span>Rágila N.<small>Google</small></span></cite>
+          </div>
+          <div class="rev reveal">
+            <span class="stars">★★★★★</span>
+            <q>Lancha impecável, marinheiro nota 10 e os lugares paradisíacos!</q>
+            <cite><i>R</i><span>Rodrigo F.<small>Google</small></span></cite>
+          </div>
+          <div class="rev reveal">
+            <span class="stars">★★★★★</span>
+            <q>Levei a família com criança pequena e idosos e foi perfeito.</q>
+            <cite><i>L</i><span>Luca L.<small>Google</small></span></cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERGUNTAS -->
+    <section class="faq-sec" id="duvidas">
+      <div class="wrap faq-grid">
+        <div class="sec-head">
+          <span class="kicker reveal">Dúvidas</span>
+          <h2 class="split">Antes de <span class="serif">embarcar.</span></h2>
+        </div>
+        <div class="faq">
+          <details class="reveal"><summary>O passeio é privativo?</summary><p>Sim. A lancha sai só com o seu grupo.</p></details>
+          <details class="reveal"><summary>Posso levar criança e cachorro?</summary><p>Pode. Tem cabine com cama de casal pras crianças descansarem.</p></details>
+          <details class="reveal"><summary>Tem churrasco a bordo?</summary><p>Tem. O marinheiro faz o churrasco durante o passeio.</p></details>
+          <details class="reveal"><summary>Como reservo?</summary><p>Monte o passeio aqui no site e chame no WhatsApp. Atendimento 24h.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMBARQUE -->
+    <section class="where-sec" id="embarque">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kicker reveal">Embarque</span>
+          <h2 class="split">No Saco <span class="serif">da Capela.</span></h2>
+        </div>
+
+        <div class="where">
+          <ul class="info">
+            <li class="reveal"><span>📍</span><div><small>Endereço</small><b>Av. Pedro de Paula Moraes, 253 · Saco da Capela, Ilhabela</b></div></li>
+            <li class="reveal"><span>🕒</span><div><small>Atendimento</small><b>24 horas, todos os dias</b></div></li>
+            <li class="reveal"><span>💬</span><div><small>WhatsApp</small><b><a href="https://wa.me/5511976442448">(11) 97644-2448</a></b></div></li>
+          </ul>
+          <div class="map-shell reveal">
+            <div class="map">
+              <iframe title="Mapa do embarque da Lancha Refúgio em Ilhabela" loading="lazy" src="https://maps.google.com/maps?q=-23.7838252,-45.3576394&z=16&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER FINAL -->
+    <section class="final">
+      <div class="final-bg">
+        <picture>
+          <source srcset="img/agua-verde.webp" type="image/webp">
+          <img src="img/agua-verde.jpg" alt="" width="1600" height="2284" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="wrap">
+        <span class="kicker reveal">Ilhabela te espera</span>
+        <h2 class="split">Sua turma, a lancha e <span class="serif">o mar inteiro.</span></h2>
+        <a class="btn btn-wa mag reveal" href="#reservar">Montar meu passeio <span class="ico"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a href="#topo" class="brand"><b>Lancha <span>Refúgio</span></b></a>
+          <p>Passeio de lancha privativo em Ilhabela, saindo do Saco da Capela.</p>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul><li><a href="#passeio">O Passeio</a></li><li><a href="#reservar">Monte seu Passeio</a></li><li><a href="#avaliacoes">Avaliações</a></li></ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul><li><a href="https://wa.me/5511976442448">(11) 97644-2448</a></li><li>Saco da Capela, Ilhabela · SP</li><li>Atendimento 24h</li></ul>
+        </div>
+      </div>
+      <div class="copy">© <span id="ano">2026</span> Lancha Ilhabela Refúgio</div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="bordo">
-  <div class="wrap">
-    <span class="kicker reveal">A bordo</span>
-    <h2 class="reveal">Conforto de <span class="serif">verdade.</span></h2>
-    <ul class="perks">
-      <li class="reveal"><span>✨</span>Lancha limpa e cheirosa</li>
-      <li class="reveal"><span>🛋️</span>Estofados macios</li>
-      <li class="reveal"><span>🛏️</span>Cabine para descansar</li>
-      <li class="reveal"><span>🔥</span>Marinheiro churrasqueiro</li>
-    </ul>
-    <div class="vibes">
-      <figure class="vibe reveal"><picture><source srcset="img/festa-a-bordo.webp" type="image/webp"><img src="img/festa-a-bordo.jpg" alt="Grupo de amigas comemorando despedida de solteira na proa da lancha" loading="lazy"></picture><figcaption>Festas e despedidas</figcaption></figure>
-      <figure class="vibe reveal"><picture><source srcset="img/agua-verde.webp" type="image/webp"><img src="img/agua-verde.jpg" alt="Lancha Refúgio ancorada em água verde-esmeralda" loading="lazy"></picture><figcaption>Água verde de Ilhabela</figcaption></figure>
-    </div>
-  </div>
-</section>
+  <a class="wa-fab" id="waFab" href="https://wa.me/5511976442448" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+  </a>
 
-<section id="avaliacoes" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker reveal">Avaliações no Google</span>
-    <h2 class="reveal">5,0 de quem <span class="serif">já foi.</span></h2>
-    <div class="revs">
-      <div class="rev reveal"><span class="stars">★★★★★</span><q>A lancha é linda e confortável. Tem cama de casal para as crianças descansarem e o marinheiro é um ótimo churrasqueiro!</q><cite>Rágila N.</cite></div>
-      <div class="rev reveal"><span class="stars">★★★★★</span><q>Lancha impecável, marinheiro nota 10 e os lugares paradisíacos!</q><cite>Rodrigo F.</cite></div>
-      <div class="rev reveal"><span class="stars">★★★★★</span><q>Levei a família com criança pequena e idosos e foi perfeito.</q><cite>Luca L.</cite></div>
-    </div>
-  </div>
-</section>
+  <script>
+    /* Roda já no carregamento, sem esperar CDN: quebra os títulos em palavras e dispara a entrada do topo em CSS */
+    (() => {
+      document.documentElement.classList.add('js');
+      const splitWords = el => {
+        [...el.childNodes].forEach(n => {
+          if (n.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            n.textContent.split(/(\s+)/).forEach(t => {
+              if (!t) return;
+              if (/^\s+$/.test(t)) { frag.append(t); return; }
+              const o = document.createElement('span'), i = document.createElement('span');
+              o.className = 'w'; i.className = 'wi'; i.textContent = t;
+              o.append(i); frag.append(o);
+            });
+            n.replaceWith(frag);
+          } else if (n.nodeType === 1) splitWords(n);
+        });
+      };
+      document.querySelectorAll('.split').forEach(splitWords);
+      document.querySelectorAll('.hero .wi').forEach((w, i) => w.style.setProperty('--i', i));
+      document.querySelectorAll('.hero-in').forEach((el, i) => el.style.setProperty('--i', i));
+    })();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const $ = id => document.getElementById(id);
+      $('ano').textContent = new Date().getFullYear();
 
-<section id="embarque" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker reveal">Embarque</span>
-    <h2 class="reveal">No Saco <span class="serif">da Capela.</span></h2>
-    <div class="where">
-      <ul class="info">
-        <li class="reveal"><small>Endereço</small><b>Av. Pedro de Paula Moraes, 253 · Saco da Capela, Ilhabela</b></li>
-        <li class="reveal"><small>Atendimento</small><b>24 horas, todos os dias</b></li>
-        <li class="reveal"><small>WhatsApp</small><b><a href="tel:+5511976442448">(11) 97644-2448</a></b></li>
-      </ul>
-      <div class="map reveal"><iframe title="Mapa do embarque da Lancha Refúgio em Ilhabela" loading="lazy" src="https://maps.google.com/maps?q=-23.7838252,-45.3576394&z=16&output=embed"></iframe></div>
-    </div>
-  </div>
-</section>
-</main>
+      /* Simulador */
+      const TIPO = { passeio: 'um passeio de lancha', festa: 'uma festa a bordo da lancha', despedida: 'uma despedida a bordo da lancha' };
+      const st = { tipo: 'passeio', adultos: 4, criancas: 0, pets: 0 };
+      const LIM = { adultos: [1, 30], criancas: [0, 20], pets: [0, 5] };
+      const OUT = { adultos: 'cAdultos', criancas: 'cCriancas', pets: 'cPets' };
+      const data = $('pData');
+      { const h = new Date(); data.min = new Date(h - h.getTimezoneOffset() * 6e4).toISOString().slice(0, 10); }
+      const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
+      const lista = it => it.length > 1 ? it.slice(0, -1).join(', ') + ' e ' + it[it.length - 1] : it[0];
 
-<footer><div class="wrap">Lancha Ilhabela Refúgio · Saco da Capela, Ilhabela · (11) 97644-2448</div></footer>
-<div class="dock" id="dock">Lancha Refúgio<a class="btn btn-wa" href="#reservar">Montar passeio</a></div>
+      function montar() {
+        const quem = [plural(st.adultos, 'adulto', 'adultos')];
+        if (st.criancas) quem.push(plural(st.criancas, 'criança', 'crianças'));
+        if (st.pets) quem.push(plural(st.pets, 'cachorro', 'cachorros'));
+        let dia = '';
+        if (data.value) { const [, m, d] = data.value.split('-'); dia = ` no dia ${d}/${m}`; }
+        const msg = `Olá, tudo bem? Estou com ${lista(quem)} e queria marcar ${TIPO[st.tipo]} em Ilhabela${dia}. Tem disponibilidade?`;
+        Object.keys(OUT).forEach(k => { $(OUT[k]).textContent = st[k]; });
+        document.querySelectorAll('.stepper button').forEach(b => {
+          const [mn, mx] = LIM[b.dataset.c];
+          b.disabled = Number(b.dataset.d) < 0 ? st[b.dataset.c] <= mn : st[b.dataset.c] >= mx;
+        });
+        document.querySelectorAll('#pTipo button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.v === st.tipo)));
+        $('pResumo').textContent = msg;
+        $('pCta').href = 'https://wa.me/5511976442448?text=' + encodeURIComponent(msg);
+      }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-  const $ = id => document.getElementById(id);
-  const TIPO = { passeio: 'um passeio de lancha', festa: 'uma festa a bordo da lancha', despedida: 'uma despedida a bordo da lancha' };
-  const st = { tipo: 'passeio', adultos: 2, criancas: 0, pets: 0 };
-  const LIM = { adultos: [1, 30], criancas: [0, 20], pets: [0, 5] };
-  const data = $('pData');
-  { const h = new Date(); data.min = new Date(h - h.getTimezoneOffset() * 6e4).toISOString().slice(0, 10); }
-  const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
-  const lista = it => it.length > 1 ? it.slice(0, -1).join(', ') + ' e ' + it[it.length - 1] : it[0];
-  function montar() {
-    const quem = [plural(st.adultos, 'adulto', 'adultos')];
-    if (st.criancas) quem.push(plural(st.criancas, 'criança', 'crianças'));
-    if (st.pets) quem.push(plural(st.pets, 'cachorro', 'cachorros'));
-    let dia = '';
-    if (data.value) { const [, m, d] = data.value.split('-'); dia = ` no dia ${d}/${m}`; }
-    const msg = `Olá, tudo bem? Estou com ${lista(quem)} e queria marcar ${TIPO[st.tipo]} em Ilhabela${dia}. Tem disponibilidade?`;
-    $('cAdultos').textContent = st.adultos; $('cCriancas').textContent = st.criancas; $('cPets').textContent = st.pets;
-    document.querySelectorAll('.stepper button').forEach(b => { const [mn, mx] = LIM[b.dataset.c]; b.disabled = Number(b.dataset.d) < 0 ? st[b.dataset.c] <= mn : st[b.dataset.c] >= mx; });
-    document.querySelectorAll('#pTipo button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.v === st.tipo)));
-    $('pResumo').textContent = msg;
-    $('pCta').href = 'https://wa.me/5511976442448?text=' + encodeURIComponent(msg);
-  }
-  document.querySelectorAll('#pTipo button').forEach(b => b.addEventListener('click', () => { st.tipo = b.dataset.v; montar(); }));
-  document.querySelectorAll('.stepper button').forEach(b => b.addEventListener('click', () => { const [mn, mx] = LIM[b.dataset.c]; st[b.dataset.c] = Math.min(mx, Math.max(mn, st[b.dataset.c] + Number(b.dataset.d))); montar(); }));
-  data.addEventListener('change', montar);
-  montar();
+      document.querySelectorAll('#pTipo button').forEach(b => b.addEventListener('click', () => { st.tipo = b.dataset.v; montar(); }));
+      document.querySelectorAll('.stepper button').forEach(b => b.addEventListener('click', () => {
+        const [mn, mx] = LIM[b.dataset.c];
+        st[b.dataset.c] = Math.min(mx, Math.max(mn, st[b.dataset.c] + Number(b.dataset.d)));
+        montar();
+        const o = $(OUT[b.dataset.c]);
+        o.classList.remove('bump'); void o.offsetWidth; o.classList.add('bump');
+      }));
+      data.addEventListener('change', montar);
+      montar();
 
-  const dock = $('dock'), vis = new Set();
-  const io = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target)); dock.classList.toggle('on', vis.size === 0); }, { threshold: .12 });
-  [document.querySelector('.hero'), $('reservar')].forEach(el => io.observe(el));
+      /* Bolinha do WhatsApp: aparece fora do hero e do simulador */
+      const fab = $('waFab'), vis = new Set();
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target));
+        fab.classList.toggle('on', vis.size === 0);
+      }, { threshold: 0.12 });
+      [document.querySelector('.hero'), $('reservar')].forEach(el => io.observe(el));
 
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined') return;
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.hero-in', { y: 22, opacity: .001, duration: .8, stagger: .08, ease: 'power3.out', clearProps: 'transform,opacity' });
-  gsap.fromTo('.hero-bg img', { scale: 1.18 }, { scale: 1.08, duration: 1.8, ease: 'power2.out' });
-  ScrollTrigger.batch('.reveal', { start: 'top 90%', once: true, onEnter: els => gsap.from(els, { y: 24, duration: .6, stagger: .07, ease: 'power3.out', clearProps: 'transform' }) });
-});
-</script>
+      /* Topo some ao descer e volta ao subir */
+      const navWrap = $('navWrap');
+      let lastY = window.scrollY, ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          navWrap.classList.toggle('hide', y > lastY && y > 160);
+          navWrap.classList.toggle('solid', y > 40);
+          lastY = y;
+          ticking = false;
+        });
+      }, { passive: true });
+
+      (() => {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+          document.querySelectorAll('#chain li').forEach(li => li.classList.add('on'));
+          return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        window.addEventListener('load', () => ScrollTrigger.refresh());
+
+        /* Rolagem suave só em mouse/trackpad */
+        let lenis = null;
+        if (window.Lenis && matchMedia('(pointer: fine)').matches) {
+          lenis = new Lenis({ lerp: 0.1 });
+          lenis.on('scroll', ScrollTrigger.update);
+          gsap.ticker.add(t => lenis.raf(t * 1000));
+          gsap.ticker.lagSmoothing(0);
+          document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+            const t = document.querySelector(a.getAttribute('href'));
+            if (!t) return;
+            e.preventDefault();
+            lenis.scrollTo(t, { offset: -84 });
+          }));
+        }
+
+        /* Títulos palavra por palavra (o do topo já anima em CSS) */
+        const heroTitle = document.querySelector('.hero .split');
+        document.querySelectorAll('.split').forEach(el => {
+          if (el === heroTitle) return;
+          gsap.from(el.querySelectorAll('.wi'), {
+            yPercent: 110, duration: 1, stagger: 0.05, ease: 'expo.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+          });
+        });
+
+        ScrollTrigger.batch('.reveal', {
+          start: 'top 90%',
+          once: true,
+          onEnter: els => gsap.from(els, { y: 36, opacity: 0, filter: 'blur(6px)', duration: 0.9, stagger: 0.08, ease: 'power3.out', clearProps: 'transform,opacity,filter' })
+        });
+
+        /* Fotos abrindo como cortina + parallax interno */
+        document.querySelectorAll('.clip').forEach(fig => {
+          gsap.from(fig, {
+            clipPath: 'inset(14% 10% 14% 10% round 30px)', duration: 1.3, ease: 'expo.out',
+            scrollTrigger: { trigger: fig, start: 'top 85%', once: true },
+            clearProps: 'clipPath'
+          });
+          const img = fig.querySelector('[data-par]');
+          if (img) gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } });
+        });
+        document.querySelectorAll('[data-parallax]').forEach(el => {
+          gsap.to(el, { yPercent: 12, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top top', end: 'bottom top', scrub: true } });
+        });
+        gsap.fromTo('.final-bg', { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.final', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+        /* Rota: linha desenha e cada parada acende */
+        gsap.fromTo('.chain-line', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#chain', start: 'top 75%', end: 'bottom 55%', scrub: 0.6 } });
+        document.querySelectorAll('#chain li:not([aria-hidden])').forEach(li => {
+          ScrollTrigger.create({ trigger: li, start: 'top 62%', onEnter: () => li.classList.add('on'), onLeaveBack: () => { if (!li.classList.contains('start')) li.classList.remove('on'); } });
+        });
+
+        /* Números contando */
+        document.querySelectorAll('[data-count]').forEach(el => {
+          const end = Number(el.dataset.count), dec = Number(el.dataset.dec || 0), o = { v: 0 };
+          gsap.to(o, {
+            v: end, duration: 1.6, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+            onUpdate: () => { el.textContent = o.v.toFixed(dec).replace('.', ','); }
+          });
+        });
+
+        /* Barra de progresso */
+        gsap.to('.progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+
+        /* Botões magnéticos (desktop) */
+        if (matchMedia('(pointer: fine)').matches) {
+          document.querySelectorAll('.mag').forEach(b => {
+            const xTo = gsap.quickTo(b, 'x', { duration: 0.5, ease: 'power3' }), yTo = gsap.quickTo(b, 'y', { duration: 0.5, ease: 'power3' });
+            b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * 0.25); yTo((e.clientY - r.top - r.height / 2) * 0.35); });
+            b.addEventListener('mouseleave', () => { xTo(0); yTo(0); });
+          });
+        }
+      })();
+    });
+  </script>
 </body>
 </html>
