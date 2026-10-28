@@ -19,16 +19,18 @@
   <meta property="og:title" content="Lancha Ilhabela Refúgio — Passeio de Lancha Privativo em Ilhabela">
   <meta property="og:description" content="Passeio privativo saindo do Saco da Capela com cabine, churrasco a bordo e águas cristalinas de Ilhabela. Nota 5,0 ★ no Google.">
   <meta property="og:url" content="https://refugio-ilhabela.vercel.app/">
-  <meta property="og:image" content="https://refugio-ilhabela.vercel.app/img/og-refugio.jpg">
+  <meta property="og:image" content="https://refugio-ilhabela.vercel.app/img/og-refugio-v2.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lancha Ilhabela Refúgio navegando em Ilhabela, saindo do Saco da Capela">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://refugio-ilhabela.vercel.app/img/og-refugio-v2.jpg">
 
   <link rel="preload" as="image" href="img/lancha-refugio-1080.webp" type="image/webp" fetchpriority="high" media="(max-width: 600px)">
   <link rel="preload" as="image" href="img/lancha-refugio.webp" type="image/webp" fetchpriority="high" media="(min-width: 601px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Kanit:ital,wght@1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Urbanist:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -98,7 +100,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; background: var(--pinho); scroll-behavior: smooth; }
     body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      font-family: 'Urbanist', system-ui, -apple-system, sans-serif;
       font-size: 16px;
       line-height: 1.55;
       color: var(--tinta);
@@ -114,8 +116,8 @@
     button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
     section, #reservar { scroll-margin-top: 80px; }
 
-    h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; line-height: 1.04; letter-spacing: -0.03em; font-weight: 800; }
-    .serif { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; }
+    .serif { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 600; letter-spacing: 0; }
 
     .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
     section { padding: 88px 0; position: relative; }
@@ -123,8 +125,8 @@
 
     .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mar); }
     .dark .eyebrow { color: var(--pessego); }
-    .h2 { font-size: clamp(34px, 8.4vw, 60px); color: var(--pinho); margin-top: 12px; text-wrap: balance; }
-    .h2 .serif { color: var(--mar); font-size: 1.08em; }
+    .h2 { font-size: clamp(28px, 7.2vw, 50px); color: var(--pinho); margin-top: 12px; text-wrap: balance; }
+    .h2 .serif { color: var(--mar); font-size: 1.28em; line-height: 0.9; }
     .dark .h2 { color: #fff; }
     .dark .h2 .serif { color: var(--pessego); }
     .head { margin-bottom: 36px; max-width: 620px; }
@@ -132,11 +134,14 @@
 
     /* ===== LOGO (redesenhada em vetor a partir da logo do Instagram @ilhabela_refugio) ===== */
     .logo { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #fff; }
+    .logo img { height: 30px; width: auto; display: block; }
+    .intro .logo img { height: 40px; }
+    .foot .logo img { height: 46px; }
     .logo svg { width: 52px; height: auto; flex: none; overflow: visible; }
     .logo .wm { display: grid; line-height: 0.9; }
-    .logo .wm small { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 0.32em; color: var(--laranja); padding-left: 2px; }
+    .logo .wm small { font-family: 'Urbanist', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 0.32em; color: var(--laranja); padding-left: 2px; }
     .logo .wm b {
-      font-family: 'Kanit', 'Bricolage Grotesque', sans-serif;
+      font-family: 'Syne', sans-serif;
       font-style: italic;
       font-weight: 800;
       font-size: 22px;
@@ -192,9 +197,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #fff;
     }
-    .nav .logo svg { width: 42px; }
-    .nav .logo .wm b { font-size: 19px; }
-    .nav-links { display: none; gap: 30px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.86); }
+        .nav-links { display: none; gap: 30px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.86); }
     .nav-links a { position: relative; padding: 12px 0; }
     .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1.5px; background: var(--laranja); transform: scaleX(0); transform-origin: right; transition: transform 400ms var(--spring); }
     .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
@@ -210,8 +213,8 @@
     .hero-content { position: relative; z-index: 2; width: 100%; padding-top: 66svh; }
     .pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); font-size: 13px; font-weight: 600; }
     .stars { color: var(--laranja); letter-spacing: 1.5px; }
-    .hero h1 { font-size: clamp(38px, 10.5vw, 76px); margin: 16px 0 12px; text-wrap: balance; text-shadow: 0 2px 24px rgba(14, 36, 31, 0.45); }
-    .hero h1 .serif { color: var(--pessego); font-size: 1.08em; }
+    .hero h1 { font-size: clamp(32px, 8.6vw, 64px); margin: 16px 0 12px; text-wrap: balance; text-shadow: 0 2px 24px rgba(14, 36, 31, 0.45); }
+    .hero h1 .serif { color: var(--pessego); font-size: 1.28em; line-height: 0.9; }
     .hero-lead { font-size: clamp(16px, 4vw, 19px); color: rgba(255, 255, 255, 0.84); max-width: 26em; margin-bottom: 26px; }
     .hero-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
     @media (min-width: 960px) {
@@ -235,7 +238,7 @@
     /* ===== Números ===== */
     .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 16px; padding: 8px 0 72px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 72px; }
     @media (min-width: 860px) { .stats { grid-template-columns: repeat(4, 1fr); padding-bottom: 96px; margin-bottom: 104px; } }
-    .stat b { display: block; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(40px, 11vw, 64px); font-weight: 800; color: #fff; line-height: 1; letter-spacing: -0.04em; }
+    .stat b { display: block; font-family: 'Syne', sans-serif; font-size: clamp(40px, 11vw, 64px); font-weight: 800; color: #fff; line-height: 1; letter-spacing: -0.02em; }
     .stat b em { font-style: normal; color: var(--laranja); font-size: 0.5em; margin-left: 4px; vertical-align: 0.6em; }
     .stat > span { display: block; margin-top: 8px; font-size: 14px; color: rgba(255, 255, 255, 0.62); }
 
@@ -247,16 +250,70 @@
     .chain-rail, .chain-line { position: absolute; left: 10px; top: 14px; bottom: 14px; width: 2px; border-radius: 2px; }
     .chain-rail { background: repeating-linear-gradient(180deg, rgba(243, 180, 143, 0.3) 0 6px, transparent 6px 12px); }
     .chain-line { background: linear-gradient(180deg, var(--pessego), var(--coral)); transform-origin: top; }
-    .chain li:not([aria-hidden]) { position: relative; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(21px, 5.4vw, 28px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+    .chain li:not([aria-hidden]) { position: relative; font-family: 'Syne', sans-serif; font-size: clamp(21px, 5.4vw, 28px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
     .chain li:not([aria-hidden])::before { content: ""; position: absolute; left: -40px; top: 5px; width: 22px; height: 22px; border-radius: 50%; background: var(--pinho); border: 2.5px solid var(--pessego); transition: background-color 400ms var(--ease), transform 400ms var(--spring); }
     .chain li.on::before { background: var(--pessego); transform: scale(1.1); }
     .chain li.end.on::before { background: var(--coral); border-color: var(--coral); }
-    .chain small { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0; color: rgba(255, 255, 255, 0.58); margin-top: 4px; }
+    .chain small { display: block; font-family: 'Urbanist', sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0; color: rgba(255, 255, 255, 0.58); margin-top: 4px; }
     .route-photo { position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--pinho-2); }
     @media (min-width: 960px) { .route-photo { aspect-ratio: 5 / 6; } }
     .route-photo img, .vibe img { position: absolute; inset: -7% 0; width: 100%; height: 114%; object-fit: cover; }
     .tag { position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: rgba(14, 36, 31, 0.72); color: #fff; font-size: 13px; font-weight: 600; }
     .tag svg { width: 15px; height: 15px; color: var(--pessego); }
+
+
+    /* ===== Ultra: cena da serra, instrumentos de bordo, mapa da rota ===== */
+    .passeio { padding-top: 0; }
+    .scene { position: relative; height: 250px; overflow: hidden; background: linear-gradient(180deg, var(--pinho) 0%, #1c4a40 52%, #2B7A63 100%); }
+    @media (min-width: 960px) { .scene { height: 340px; } }
+    .scene svg.sc { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .scene .sun { animation: sunrise 2.4s var(--ease) both; }
+    @keyframes sunrise { from { transform: translateY(40px); opacity: 0; } }
+    .scene .rg { will-change: transform; }
+    .scene .sea-w { animation: sway 7s linear infinite; }
+    .scene .sea-w2 { animation: sway 11s linear infinite reverse; }
+    @keyframes sway { to { transform: translateX(-120px); } }
+    .scene-boat { position: absolute; bottom: 22px; left: 0; width: 92px; will-change: transform; }
+    .scene-boat svg { width: 100%; display: block; animation: rock 3.2s ease-in-out infinite; transform-origin: 50% 90%; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+    @keyframes rock { 50% { transform: translateY(-3px) rotate(-2.5deg); } }
+    .scene-boat::before { content: ""; position: absolute; right: 78%; top: 62%; width: 110px; height: 7px; border-radius: 7px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.85)); filter: blur(1px); }
+    .scene-boat::after { content: ""; position: absolute; right: 70%; top: 78%; width: 80px; height: 5px; border-radius: 5px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55)); }
+    .scene .sea-edge { position: absolute; left: 0; right: 0; bottom: 0; height: 28px; }
+    .gauges { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 12px; padding: 64px 0 64px; border-bottom: 1px solid rgba(255,255,255,.1); margin-bottom: 72px; }
+    @media (min-width: 860px) { .gauges { grid-template-columns: repeat(4, 1fr); padding: 88px 0; margin-bottom: 104px; } }
+    .gauge { text-align: center; }
+    .dial { position: relative; width: min(100%, 168px); margin: 0 auto; aspect-ratio: 1; }
+    .dial svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .dial .ring { fill: none; stroke: url(#brass); stroke-width: 5; }
+    .dial .ticks { fill: none; stroke: rgba(255,255,255,.3); stroke-width: 6; stroke-dasharray: 1.2 4.4; }
+    .dial .track { fill: none; stroke: rgba(255,255,255,.1); stroke-width: 6; }
+    .dial .arc { fill: none; stroke: var(--laranja); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transform: rotate(-90deg); transform-origin: 60px 60px; transition: stroke-dashoffset 1.8s var(--ease) 0.2s; }
+    .js .gauge.in .arc { stroke-dashoffset: 0; }
+    .dial .orb { transform-origin: 60px 60px; animation: orbit 12s linear infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    .dial .mid { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+    .dial .mid b { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(22px, 6.4vw, 30px); line-height: 1; color: #fff; letter-spacing: -0.02em; }
+    .dial .mid b small { font-size: 0.5em; color: var(--laranja); margin-left: 2px; }
+    .dial .mid svg.bed { position: static; width: 26px; height: 26px; margin: 0 auto 2px; color: var(--pessego); }
+    .gauge > span { display: block; margin-top: 14px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.72); max-width: 14ch; margin-inline: auto; }
+    .mapa { position: relative; max-width: 380px; margin: 0 auto; border-radius: 28px; overflow: hidden; background: var(--pinho-2); box-shadow: 0 30px 60px -34px rgba(0,0,0,.7); }
+    @media (min-width: 960px) { .mapa { margin: 0; } }
+    .mapa svg.ms { display: block; width: 100%; height: auto; }
+    .mapa .rota-b { fill: none; stroke: rgba(243,180,143,.45); stroke-width: 2.5; stroke-dasharray: 2 9; stroke-linecap: round; }
+    .mapa .rota-f { fill: none; stroke: var(--laranja); stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 5px rgba(242,154,56,.8)); }
+    .mapa .lancha { position: absolute; left: 0; top: 0; width: 52px; margin: -13px 0 0 -26px; will-change: transform; filter: drop-shadow(0 4px 5px rgba(0,0,0,.4)); }
+    .mapa .lancha svg { display: block; width: 100%; height: auto; }
+    .pn { position: absolute; width: 0; height: 0; }
+    .pn::before { content: ""; position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--pinho); border: 3px solid var(--pessego); transition: background-color .4s var(--ease), transform .4s var(--spring); }
+    .pn.on::before { background: var(--laranja); border-color: #fff; transform: scale(1.25); }
+    .pn.end.on::before { background: var(--coral); }
+    .pn .t { position: absolute; left: 20px; top: -20px; width: 126px; text-align: left; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; line-height: 1.15; color: #fff; opacity: .45; transition: opacity .5s var(--ease); }
+    .pn.on .t { opacity: 1; }
+    @media (max-width: 380px) { .pn .t { width: 104px; font-size: 13px; } .pn .t small { font-size: 11.5px; } }
+    .pn .t small { display: block; margin-top: 3px; font-family: 'Urbanist', sans-serif; font-weight: 500; font-size: 12.5px; color: rgba(255,255,255,.62); }
+    .mapa .lbl-ilha { position: absolute; right: 16px; bottom: 14px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 22px; color: var(--pessego); }
+    .caustic { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light; opacity: .55; background: radial-gradient(circle at 20% 30%, rgba(255,255,255,.5) 0 6%, transparent 7%), radial-gradient(circle at 70% 60%, rgba(255,255,255,.45) 0 5%, transparent 6%), radial-gradient(circle at 45% 80%, rgba(255,255,255,.4) 0 7%, transparent 8%); background-size: 180px 140px, 220px 170px, 150px 120px; animation: caustic 14s linear infinite; }
+    @keyframes caustic { to { background-position: 180px 140px, -220px 170px, 150px -120px; } }
 
     /* ===== Monte seu passeio ===== */
     .planner { margin-top: 72px; border-radius: 30px; background: var(--nevoa-2); color: var(--tinta); padding: 30px 20px; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.6); }
@@ -276,7 +333,7 @@
     .stepper button { width: 48px; height: 48px; border-radius: 50%; background: var(--pinho-2); color: #fff; font-size: 20px; font-weight: 700; transition: transform 200ms var(--spring), opacity 200ms; }
     .stepper button:active { transform: scale(0.9); }
     .stepper button:disabled { opacity: 0.25; }
-    .stepper output { min-width: 26px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 800; display: inline-block; }
+    .stepper output { min-width: 26px; text-align: center; font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; display: inline-block; }
     .stepper output.bump { animation: bump 320ms var(--spring); }
     @keyframes bump { 40% { transform: scale(1.35); color: var(--mar); } }
     input[type=date] { font: inherit; font-size: 16px; min-height: 50px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--linha); background: #fff; width: 100%; color: var(--tinta); }
@@ -292,14 +349,14 @@
     .vibes { display: grid; gap: 14px; }
     @media (min-width: 860px) { .vibes { grid-template-columns: 1.15fr 1fr; gap: 20px; } }
     .vibe { position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--pinho); }
-    .vibe figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 70px 22px 22px; background: linear-gradient(180deg, transparent, rgba(14, 36, 31, 0.7)); color: #fff; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; text-shadow: 0 2px 14px rgba(14, 36, 31, 0.5); }
+    .vibe figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 70px 22px 22px; background: linear-gradient(180deg, transparent, rgba(14, 36, 31, 0.7)); color: #fff; font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; text-shadow: 0 2px 14px rgba(14, 36, 31, 0.5); }
 
     /* ===== Avaliações ===== */
     .rev-sec { background: var(--pinho); color: #fff; }
     .rev-top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 36px; }
     .rev-top .head { margin-bottom: 0; }
     .big-score { display: flex; align-items: center; gap: 14px; }
-    .big-score b { font-family: 'Bricolage Grotesque', sans-serif; font-size: 64px; line-height: 0.9; letter-spacing: -0.04em; }
+    .big-score b { font-family: 'Syne', sans-serif; font-size: 64px; line-height: 0.9; letter-spacing: -0.02em; }
     .big-score small { display: block; font-size: 13px; color: rgba(255, 255, 255, 0.6); }
     .revs { display: grid; grid-auto-flow: column; grid-auto-columns: 86%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; scrollbar-width: none; margin: 0 -20px; padding: 0 20px 6px; overscroll-behavior-x: contain; }
     .revs::-webkit-scrollbar { display: none; }
@@ -340,8 +397,8 @@
     .final-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
     .final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14, 36, 31, 0.3) 0%, rgba(14, 36, 31, 0.15) 45%, rgba(14, 36, 31, 0.7) 100%); }
     .final .wrap { position: relative; z-index: 2; }
-    .final h2 { font-size: clamp(38px, 10vw, 76px); text-wrap: balance; text-shadow: 0 4px 30px rgba(14, 36, 31, 0.55); margin: 0 auto 30px; max-width: 13ch; }
-    .final h2 .serif { color: var(--pessego); }
+    .final h2 { font-size: clamp(30px, 8vw, 62px); text-wrap: balance; text-shadow: 0 4px 30px rgba(14, 36, 31, 0.55); margin: 0 auto 30px; max-width: 13ch; }
+    .final h2 .serif { color: var(--pessego); font-size: 1.28em; line-height: 0.9; }
 
     /* ===== Rodapé ===== */
     footer { background: var(--pinho); color: rgba(255, 255, 255, 0.6); font-size: 14px; padding: 56px 0 110px; }
@@ -375,6 +432,9 @@
       .intro { display: none; }
       .js .reveal { opacity: 1; transform: none; }
       .js .clip { clip-path: none; }
+      .js .gauge .arc { stroke-dashoffset: 0; transition: none; }
+      .scene .sea-w, .scene .sea-w2, .scene-boat svg, .dial .orb, .caustic, .scene .sun { animation: none !important; }
+      .pn .t { opacity: 1; }
     }
   </style>
 </head>
@@ -395,13 +455,13 @@
   </svg>
 
   <div class="intro" aria-hidden="true">
-    <span class="logo"><svg viewBox="0 0 120 56"><use href="#boat"/></svg><span class="wm"><small>ILHABELA</small><b>REFÚGIO</b></span></span>
+    <span class="logo"><img src="img/logo-refugio-420.webp" srcset="img/logo-refugio-420.webp 420w, img/logo-refugio-840.webp 840w" sizes="190px" width="183" height="30" alt="Ilhabela Refúgio"></span>
   </div>
   <div class="progress" aria-hidden="true"></div>
 
   <div class="nav-wrap" id="navWrap">
     <nav class="nav" aria-label="Navegação">
-      <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, início"><svg viewBox="0 0 120 56" aria-hidden="true"><use href="#boat"/></svg><span class="wm"><small>ILHABELA</small><b>REFÚGIO</b></span></a>
+      <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, início"><img src="img/logo-refugio-420.webp" srcset="img/logo-refugio-420.webp 420w, img/logo-refugio-840.webp 840w" sizes="190px" width="183" height="30" alt=""></a>
       <div class="nav-links">
         <a href="#passeio">O Passeio</a>
         <a href="#reservar">Monte seu Passeio</a>
@@ -436,12 +496,26 @@
 
     <!-- O PASSEIO + SIMULADOR -->
     <section class="passeio dark" id="passeio">
+      <div class="scene" aria-hidden="true" id="scene">
+        <svg class="sc" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B7A63"/><stop offset="1" stop-color="#0F3B33"/></linearGradient><radialGradient id="sunG"><stop offset="0" stop-color="#F8C79B" stop-opacity=".95"/><stop offset="1" stop-color="#F29A38" stop-opacity="0"/></radialGradient></defs>
+          <g class="sun"><circle cx="600" cy="150" r="130" fill="url(#sunG)"/><circle cx="600" cy="150" r="42" fill="#F3B48F"/></g>
+          <g class="rg" data-s="-14"><path fill="#255a4d" d="M-60 205 L70 150 L150 178 L260 118 L350 170 L450 132 L560 190 L650 142 L760 186 L860 112 L960 168 L1060 128 L1150 175 L1260 140 V250 H-60Z"/></g>
+          <g class="rg" data-s="10"><path fill="#17403a" d="M-60 225 L40 190 L130 214 L250 168 L360 212 L470 184 L590 222 L700 180 L810 218 L930 172 L1040 214 L1150 190 L1260 216 V260 H-60Z"/></g>
+          <path fill="#0E241F" d="M-20 245 C150 222 260 252 420 238 S700 226 860 244 S1100 228 1230 244 V270 H-20Z"/>
+          <rect y="238" width="1200" height="70" fill="url(#seaG)"/>
+          <g class="sea-w"><path d="M-120 250 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"/></g>
+          <g class="sea-w2"><path d="M-120 272 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="rgba(166,240,222,.35)" stroke-width="2"/></g>
+        </svg>
+        <div class="scene-boat" id="sceneBoat"><svg viewBox="0 0 120 56"><use href="#boat"/></svg></div>
+      </div>
       <div class="wrap">
-        <div class="stats">
-          <div class="stat reveal"><b><span data-count="5" data-dec="1">5,0</span><em>★</em></b><span>nota no Google</span></div>
-          <div class="stat reveal"><b><span data-count="24">24</span>h</b><span>atendimento</span></div>
-          <div class="stat reveal"><b><span data-count="100">100</span>%</b><span>privativo</span></div>
-          <div class="stat reveal"><b><span data-count="1">1</span></b><span>cabine com cama de casal</span></div>
+        <div class="gauges">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8B347"/><stop offset="1" stop-color="#C8571F"/></linearGradient></defs></svg>
+          <div class="gauge reveal"><div class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="57"/><circle class="ticks" cx="60" cy="60" r="50"/><circle class="track" cx="60" cy="60" r="42"/><circle class="arc" cx="60" cy="60" r="42" pathLength="100"/></svg><div class="mid"><b><span data-count="5" data-dec="1">5,0</span><small>★</small></b></div></div><span>nota no Google</span></div>
+          <div class="gauge reveal"><div class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="57"/><circle class="ticks" cx="60" cy="60" r="50"/><circle class="track" cx="60" cy="60" r="42"/><circle class="arc" cx="60" cy="60" r="42" pathLength="100"/><g class="orb"><circle cx="60" cy="6" r="3.2" fill="#fff"/></g></svg><div class="mid"><b><span data-count="24">24</span><small>h</small></b></div></div><span>atendimento</span></div>
+          <div class="gauge reveal"><div class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="57"/><circle class="ticks" cx="60" cy="60" r="50"/><circle class="track" cx="60" cy="60" r="42"/><circle class="arc" cx="60" cy="60" r="42" pathLength="100"/></svg><div class="mid"><b><span data-count="100">100</span><small>%</small></b></div></div><span>privativo</span></div>
+          <div class="gauge reveal"><div class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="57"/><circle class="ticks" cx="60" cy="60" r="50"/><circle class="track" cx="60" cy="60" r="42"/><circle class="arc" cx="60" cy="60" r="42" pathLength="100"/></svg><div class="mid"><svg class="bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V6M3 14h18v4M21 18v-4a3 3 0 0 0-3-3h-7v3"/><circle cx="7" cy="11" r="2"/></svg><b><span data-count="1">1</span></b></div></div><span>cabine com cama de casal</span></div>
         </div>
 
         <div class="route-grid">
@@ -450,14 +524,19 @@
               <span class="eyebrow reveal">O passeio</span>
               <h2 class="h2 split">A lancha é toda <span class="serif">de vocês.</span></h2>
             </div>
-            <ol class="chain" id="chain">
-              <li class="chain-rail" aria-hidden="true"></li>
-              <li class="chain-line" aria-hidden="true"></li>
-              <li class="start on">Saco da Capela <small>embarque</small></li>
-              <li>Praia da Fome <small>mergulho em água verde</small></li>
-              <li>Jabaquara <small>parada para banho</small></li>
-              <li class="end">Churrasco a bordo <small>feito pelo marinheiro</small></li>
-            </ol>
+<div class="mapa reveal" id="mapa" role="img" aria-label="Rota ilustrada do passeio: Saco da Capela, Praia da Fome, Jabaquara e churrasco a bordo">
+              <svg class="ms" viewBox="0 0 360 520" aria-hidden="true">
+                <defs><linearGradient id="mw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d6a58"/><stop offset="1" stop-color="#0f3b33"/></linearGradient></defs>
+                <rect width="360" height="520" fill="url(#mw)"/>
+                <path d="M 360 0 L 262 0 C 246 36 268 66 250 112 C 232 160 262 190 246 244 C 230 298 258 330 244 384 C 232 430 252 470 236 520 L 360 520 Z" fill="#1B4038"/>
+                <path d="M 360 40 L 330 14 L 306 44 L 284 6 L 262 60 L 360 70Z M 360 190 L 322 158 L 300 196 L 278 150 L 258 214 L 360 232Z M 360 360 L 326 326 L 304 366 L 282 318 L 256 384 L 360 404Z" fill="#245247"/>
+                <path d="M 360 0 L 262 0 C 246 36 268 66 250 112 C 232 160 262 190 246 244 C 230 298 258 330 244 384 C 232 430 252 470 236 520 L 360 520 Z" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+                <path class="rota-b" d="M 120 466 C 124 424 168 408 172 350 C 176 290 136 262 150 205 C 166 150 138 128 156 70"/><path class="rota-f" d="M 120 466 C 124 424 168 408 172 350 C 176 290 136 262 150 205 C 166 150 138 128 156 70"/>
+              </svg>
+              <span class="lbl-ilha" aria-hidden="true">Ilhabela</span>
+              <div class="lancha" aria-hidden="true"><svg viewBox="0 0 120 56"><use href="#boat"/></svg></div>
+              <div class="pn start" data-f="0"><div class="t">Saco da Capela<small>embarque</small></div></div><div class="pn " data-f="0.36"><div class="t">Praia da Fome<small>mergulho em água verde</small></div></div><div class="pn " data-f="0.7"><div class="t">Jabaquara<small>parada para banho</small></div></div><div class="pn end" data-f="1"><div class="t">Churrasco a bordo<small>feito pelo marinheiro</small></div></div>
+            </div>
           </div>
           <figure class="route-photo clip">
             <picture>
@@ -629,6 +708,7 @@
 
     <!-- BANNER FINAL -->
     <section class="final">
+      <div class="caustic" aria-hidden="true" style="z-index:1"></div>
       <div class="final-bg">
         <picture>
           <source media="(max-width: 600px)" srcset="img/agua-verde-1080.webp" type="image/webp">
@@ -647,7 +727,7 @@
     <div class="wrap">
       <div class="foot">
         <div>
-          <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, voltar ao topo"><svg viewBox="0 0 120 56" aria-hidden="true"><use href="#boat"/></svg><span class="wm"><small>ILHABELA</small><b>REFÚGIO</b></span></a>
+          <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, voltar ao topo"><img src="img/logo-refugio-420.webp" srcset="img/logo-refugio-420.webp 420w, img/logo-refugio-840.webp 840w" sizes="190px" width="183" height="30" alt=""></a>
           <p style="margin-top:10px;max-width:30ch">Passeio de lancha privativo em Ilhabela, saindo do Saco da Capela.</p>
         </div>
         <div>
@@ -770,13 +850,42 @@
       }, { passive: true });
     });
   </script>
+  <script>
+    /* Mapa: lancha desenha a rota, paradas acendem; cena: lancha cruza o mar com a rolagem; serra em parallax */
+    window.addEventListener('DOMContentLoaded', () => {
+      const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const mapa = document.getElementById('mapa'), base = mapa.querySelector('.rota-b'), feito = mapa.querySelector('.rota-f'), barco = mapa.querySelector('.lancha');
+      const svg = mapa.querySelector('svg.ms'), vb = svg.viewBox.baseVal, L = base.getTotalLength();
+      feito.style.strokeDasharray = L; feito.style.strokeDashoffset = rm ? 0 : L;
+      const pts = [...mapa.querySelectorAll('.pn')].map(el => {
+        const f = parseFloat(el.dataset.f), p = base.getPointAtLength(L * f);
+        el.style.left = (p.x / vb.width * 100) + '%'; el.style.top = (p.y / vb.height * 100) + '%';
+        return { el, f };
+      });
+      const scene = document.getElementById('scene'), sb = document.getElementById('sceneBoat'), rgs = [...scene.querySelectorAll('.rg')];
+      function tick() {
+        const vh = innerHeight, r = mapa.getBoundingClientRect(), w = mapa.clientWidth;
+        const p = rm ? 1 : Math.min(1, Math.max(0, (vh * 0.8 - r.top) / (r.height * 0.9)));
+        const a = base.getPointAtLength(L * p), b0 = base.getPointAtLength(Math.max(0, L * p - 2)), b1 = base.getPointAtLength(Math.min(L, L * p + 2));
+        const ang = Math.atan2(b1.y - b0.y, b1.x - b0.x) * 180 / Math.PI, k = w / vb.width;
+        barco.style.transform = `translate(${a.x * k}px, ${a.y * k}px) rotate(${ang}deg)`;
+        feito.style.strokeDashoffset = L * (1 - p);
+        pts.forEach(q => q.el.classList.toggle('on', p >= q.f - 0.01));
+        const sr = scene.getBoundingClientRect(), sp = rm ? 0.5 : Math.min(1, Math.max(0, (vh - sr.top) / (vh + sr.height)));
+        sb.style.transform = `translateX(${-100 + sp * (scene.clientWidth + 200)}px)`;
+        rgs.forEach(g => g.style.transform = `translateX(${(sp - 0.5) * parseFloat(g.dataset.s) * 6}px)`);
+      }
+      let q = false;
+      addEventListener('scroll', () => { if (!q) { q = true; requestAnimationFrame(() => { q = false; tick(); }); } }, { passive: true });
+      addEventListener('resize', tick); tick();
+    });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script>
     /* Movimento de scroll (GSAP só aqui; se o CDN falhar, o site continua inteiro) */
     window.addEventListener('DOMContentLoaded', () => {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-        document.querySelectorAll('#chain li').forEach(li => li.classList.add('on'));
         return;
       }
       gsap.registerPlugin(ScrollTrigger);
@@ -795,12 +904,6 @@
       });
       gsap.to('[data-parallax]', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.fromTo('.final-bg', { yPercent: -7 }, { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.final', start: 'top bottom', end: 'bottom top', scrub: true } });
-
-      /* Rota: linha desenha e cada parada acende */
-      gsap.fromTo('.chain-line', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#chain', start: 'top 78%', end: 'bottom 55%', scrub: 0.6 } });
-      document.querySelectorAll('#chain li:not([aria-hidden])').forEach(li => {
-        ScrollTrigger.create({ trigger: li, start: 'top 66%', onEnter: () => li.classList.add('on'), onLeaveBack: () => { if (!li.classList.contains('start')) li.classList.remove('on'); } });
-      });
 
       /* Números contando */
       document.querySelectorAll('[data-count]').forEach(el => {
