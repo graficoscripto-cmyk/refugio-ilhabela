@@ -449,6 +449,36 @@
     .foot a:hover { color: #fff; }
     .copy { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 12.5px; }
 
+    /* ===== DESTINOS ===== */
+    .dest { margin-top: 72px; scroll-margin-top: 96px; }
+    @media (min-width: 960px) { .dest { margin-top: 112px; } }
+    .dgrid { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 4px 20px 18px; scroll-padding: 0 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; overscroll-behavior-x: contain; }
+    .dgrid::-webkit-scrollbar { display: none; }
+    .dcard { position: relative; flex: 0 0 78%; max-width: 330px; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; scroll-snap-align: center; background: var(--pinho-2); isolation: isolate; box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.6); }
+    .dmedia { position: absolute; inset: 0; z-index: -2; }
+    .dmedia img, .dmedia svg { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+    .dcard::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(14, 36, 31, 0) 38%, rgba(14, 36, 31, 0.9) 100%); }
+    .dsoon { position: absolute; left: 0; right: 0; top: 42%; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pessego); }
+    .dlim { position: absolute; top: 14px; left: 14px; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: rgba(14, 36, 31, 0.62); border: 1px solid rgba(255, 255, 255, 0.22); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+    .dbody { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px; color: #fff; }
+    .dbody h3 { font-size: 24px; color: #fff; }
+    @media (max-width: 380px) { .dcard { flex-basis: 82%; } .dbody h3 { font-size: 17px; } .dbody { padding: 16px; } }
+    .dbody p { margin: 6px 0 14px; font-size: 14.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.86); }
+    .dpick { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; white-space: nowrap; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff; background: var(--coral); transition: background 0.3s var(--ease), transform 0.3s var(--ease); }
+    .dpick svg { width: 16px; height: 16px; }
+    .dpick:hover { background: var(--coral-2); }
+    .dpick:active { transform: scale(0.97); }
+    .dpick:focus-visible { outline: 3px solid var(--pessego); outline-offset: 3px; }
+    @media (hover: hover) { .dcard:hover .dmedia img { transform: scale(1.05); } }
+    @media (min-width: 960px) {
+      .dgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 0; padding: 0; overflow: visible; }
+      .dcard { flex: none; max-width: none; aspect-ratio: 4 / 4.6; }
+      .dbody h3 { font-size: 30px; }
+    }
+    .fotos { margin-top: 18px; font-size: 11.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.5); }
+    .fotos b { font-weight: 700; color: rgba(255, 255, 255, 0.7); }
+    .fotos a { text-decoration: underline; text-underline-offset: 2px; }
+
     /* ===== Bolinha do WhatsApp (único verde do site) ===== */
     .wa-fab { position: fixed; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 75; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: var(--wa); color: #fff; box-shadow: 0 14px 30px -10px rgba(14, 36, 31, 0.6); transform: scale(0); transition: transform 480ms var(--spring); }
     .wa-fab.on { transform: scale(1); }
@@ -502,6 +532,7 @@
       </a>
       <div class="nav-links">
         <a href="#passeio">O Passeio</a>
+        <a href="#destinos">Destinos</a>
         <a href="#reservar">Monte seu Passeio</a>
         <a href="#avaliacoes">Avaliações (5,0 ★)</a>
       </div>
@@ -584,6 +615,71 @@
             </picture>
             <figcaption class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Canal de Ilhabela</figcaption>
           </figure>
+        </div>
+
+
+        <!-- DESTINOS -->
+        <div class="dest" id="destinos">
+          <div class="head">
+            <span class="eyebrow reveal">Praias e destinos</span>
+            <h2 class="h2 split">Escolha o <span class="serif">cantinho</span> de vocês.</h2>
+          </div>
+          <div class="dgrid reveal" role="list" aria-label="Destinos do passeio">
+          <article class="dcard" role="listitem" data-dest="Praia da Fome">
+            <div class="dmedia"><picture><source type="image/webp" srcset="img/destino-fome-800.webp 800w, img/destino-fome-1400.webp 1400w" sizes="(max-width: 959px) 80vw, 360px"><img src="img/destino-fome-800.webp" alt="Praia da Fome vista de cima, com mata e faixa de areia" width="800" height="1000" loading="lazy" decoding="async"></picture></div>
+            <span class="dlim">até 12 pessoas</span>
+            <div class="dbody">
+              <h3>Praia da Fome</h3>
+              <p>Água verde e calma, ótima para um mergulho.</p>
+              <button type="button" class="dpick" data-pick="Praia da Fome" aria-label="Escolher Praia da Fome no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          <article class="dcard" role="listitem" data-dest="Jabaquara">
+            <div class="dmedia"><picture><source type="image/webp" srcset="img/destino-jabaquara-800.webp 800w, img/destino-jabaquara-1400.webp 1400w" sizes="(max-width: 959px) 80vw, 360px"><img src="img/destino-jabaquara-800.webp" alt="Praia do Jabaquara com barcos ancorados em água azul-turquesa" width="800" height="1000" loading="lazy" decoding="async"></picture></div>
+            <span class="dlim">até 12 pessoas</span>
+            <div class="dbody">
+              <h3>Jabaquara</h3>
+              <p>Parada para banho, com barcos ancorados na enseada.</p>
+              <button type="button" class="dpick" data-pick="Jabaquara" aria-label="Escolher Jabaquara no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          <article class="dcard" role="listitem" data-dest="Eustáquio">
+            <div class="dmedia dnone" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="dnG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B4038"/><stop offset="1" stop-color="#0E241F"/></linearGradient></defs><rect width="400" height="500" fill="url(#dnG)"/><circle cx="270" cy="150" r="46" fill="#F3B48F" opacity=".85"/><path d="M-10 300 L90 230 L170 280 L260 210 L410 300 V500 H-10Z" fill="#255a4d"/><path d="M-10 360 C80 335 140 380 220 360 S350 340 410 362 V500 H-10Z" fill="#2B7A63" opacity=".8"/></svg><span class="dsoon">foto em breve</span></div>
+            <span class="dlim">até 12 pessoas</span>
+            <div class="dbody">
+              <h3>Eustáquio</h3>
+              <p>Praia reservada no litoral da ilha.</p>
+              <button type="button" class="dpick" data-pick="Eustáquio" aria-label="Escolher Eustáquio no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          <article class="dcard" role="listitem" data-dest="Castelhanos">
+            <div class="dmedia"><picture><source type="image/webp" srcset="img/destino-castelhanos-800.webp 800w, img/destino-castelhanos-1400.webp 1400w" sizes="(max-width: 959px) 80vw, 360px"><img src="img/destino-castelhanos-800.webp" alt="Praia dos Castelhanos com areia, mar aberto e ilhota ao fundo" width="800" height="1000" loading="lazy" decoding="async"></picture></div>
+            <span class="dlim">até 10 pessoas</span>
+            <div class="dbody">
+              <h3>Castelhanos</h3>
+              <p>A maior praia da ilha, de mar aberto e cercada de mata.</p>
+              <button type="button" class="dpick" data-pick="Castelhanos" aria-label="Escolher Castelhanos no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          <article class="dcard" role="listitem" data-dest="Bonete">
+            <div class="dmedia"><picture><source type="image/webp" srcset="img/destino-bonete-800.webp 800w, img/destino-bonete-1400.webp 1400w" sizes="(max-width: 959px) 80vw, 360px"><img src="img/destino-bonete-800.webp" alt="Praia do Bonete vista do alto, com a serra ao fundo" width="800" height="1000" loading="lazy" decoding="async"></picture></div>
+            <span class="dlim">até 10 pessoas</span>
+            <div class="dbody">
+              <h3>Bonete</h3>
+              <p>Vila caiçara de mar aberto, entre serra e mata.</p>
+              <button type="button" class="dpick" data-pick="Bonete" aria-label="Escolher Bonete no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          <article class="dcard" role="listitem" data-dest="Indaiaúba">
+            <div class="dmedia"><picture><source type="image/webp" srcset="img/destino-indaiauba-800.webp 800w, img/destino-indaiauba-1400.webp 1400w" sizes="(max-width: 959px) 80vw, 360px"><img src="img/destino-indaiauba-800.webp" alt="Praia de Indaiaúba com rochas na beira e mata ao fundo" width="800" height="1000" loading="lazy" decoding="async"></picture></div>
+            <span class="dlim">até 10 pessoas</span>
+            <div class="dbody">
+              <h3>Indaiaúba</h3>
+              <p>Cantinho calmo, com mata atlântica ao redor.</p>
+              <button type="button" class="dpick" data-pick="Indaiaúba" aria-label="Escolher Indaiaúba no planejador">Escolher este destino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+            </div>
+          </article>
+          </div>
         </div>
 
         <!-- Monte seu passeio -->
@@ -785,13 +881,14 @@
         </div>
         <div>
           <h4>Navegue</h4>
-          <ul><li><a href="#passeio">O Passeio</a></li><li><a href="#reservar">Monte seu Passeio</a></li><li><a href="#avaliacoes">Avaliações</a></li></ul>
+          <ul><li><a href="#passeio">O Passeio</a></li><li><a href="#destinos">Destinos</a></li><li><a href="#reservar">Monte seu Passeio</a></li><li><a href="#avaliacoes">Avaliações</a></li></ul>
         </div>
         <div>
           <h4>Contato</h4>
           <ul><li><a href="https://wa.me/5511976442448">(11) 97644-2448</a></li><li><a href="https://www.instagram.com/ilhabela_refugio/" target="_blank" rel="noopener">@ilhabela_refugio</a></li><li><span>Saco da Capela, Ilhabela · SP</span></li></ul>
         </div>
       </div>
+      <p class="fotos"><b>Fotos dos destinos (Wikimedia Commons):</b> Praia da Fome: <a href="https://commons.wikimedia.org/wiki/File:Praia_da_Fome_-_Ilhabela-_S%C3%A3o_Paulo_4.JPG" target="_blank" rel="noopener">Priscila Mayumi de Souza</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a> · Jabaquara: <a href="https://commons.wikimedia.org/wiki/File:Praia_do_jabaquara.jpg" target="_blank" rel="noopener">Mattheus Almeida</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a> · Castelhanos: <a href="https://commons.wikimedia.org/wiki/File:SP_Ilhabela_-_Praia_dos_Castelhanos.JPG" target="_blank" rel="noopener">Daniel Souza Lima</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · Bonete: <a href="https://commons.wikimedia.org/wiki/File:Praia_do_Bonete,_Ilhabela,_2021.jpg" target="_blank" rel="noopener">Jcornelius</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · Indaiaúba: <a href="https://commons.wikimedia.org/wiki/File:Indaiauba.jpg" target="_blank" rel="noopener">Camila Se Garcia</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>
       <div class="copy">© <span id="ano">2026</span> Lancha Ilhabela Refúgio · Atendimento 24h</div>
     </div>
   </footer>
@@ -924,6 +1021,14 @@
       }));
       data.addEventListener('change', montar);
       montar();
+
+      /* Destinos: card seleciona o destino no planejador e rola ate ele */
+      document.querySelectorAll('.dpick').forEach(b => b.addEventListener('click', () => {
+        const alvo = [...document.querySelectorAll('#pDestino button')].find(x => x.dataset.d === b.dataset.pick);
+        if (alvo) alvo.click();
+        const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        $('reservar').scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
+      }));
 
       /* Bolinha do WhatsApp: aparece fora do hero e do simulador */
       const fab = $('waFab'), vis = new Set();
