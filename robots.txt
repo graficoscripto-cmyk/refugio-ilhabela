@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://refugio-ilhabela.vercel.app/sitemap.xml
+Sitemap: https://lancharefugio.com.br/sitemap.xml
