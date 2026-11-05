@@ -133,10 +133,42 @@
     @media (min-width: 960px) { .head { margin-bottom: 56px; } }
 
     /* ===== LOGO (redesenhada em vetor a partir da logo do Instagram @ilhabela_refugio) ===== */
-    .logo { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #fff; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #fff; }
     .logo img { height: 30px; width: auto; display: block; }
     .intro .logo img { height: 40px; }
     .foot .logo img { height: 46px; }
+    .logo-round {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50%;
+      object-fit: cover;
+      flex: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+    }
+    .foot .logo-round {
+      width: 58px !important;
+      height: 58px !important;
+    }
+    .logo-wm {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: #fff;
+      line-height: 1.05;
+    }
+    .logo-wm small {
+      display: block;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--laranja);
+    }
+    .foot .logo-wm { font-size: 20px; }
+    .foot .logo-wm small { font-size: 10.5px; }
     .logo svg { width: 52px; height: auto; flex: none; overflow: visible; }
     .logo .wm { display: grid; line-height: 0.9; }
     .logo .wm small { font-family: 'Urbanist', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 0.32em; color: var(--laranja); padding-left: 2px; }
@@ -273,8 +305,8 @@
     .scene .sea-w { animation: sway 7s linear infinite; }
     .scene .sea-w2 { animation: sway 11s linear infinite reverse; }
     @keyframes sway { to { transform: translateX(-120px); } }
-    .scene-boat { position: absolute; bottom: 22px; left: 0; width: 92px; will-change: transform; }
-    .scene-boat svg { width: 100%; display: block; animation: rock 3.2s ease-in-out infinite; transform-origin: 50% 90%; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+    .scene-boat { position: absolute; bottom: 20px; left: 0; width: 58px; height: 58px; will-change: transform; }
+    .scene-boat svg, .scene-boat img { width: 100%; height: 100%; display: block; border-radius: 50%; animation: rock 3.2s ease-in-out infinite; transform-origin: 50% 90%; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); border: 2px solid rgba(255,255,255,.75); }
     @keyframes rock { 50% { transform: translateY(-3px) rotate(-2.5deg); } }
     .scene-boat::before { content: ""; position: absolute; right: 78%; top: 62%; width: 110px; height: 7px; border-radius: 7px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.85)); filter: blur(1px); }
     .scene-boat::after { content: ""; position: absolute; right: 70%; top: 78%; width: 80px; height: 5px; border-radius: 5px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55)); }
@@ -301,8 +333,8 @@
     .mapa svg.ms { display: block; width: 100%; height: auto; }
     .mapa .rota-b { fill: none; stroke: rgba(243,180,143,.45); stroke-width: 2.5; stroke-dasharray: 2 9; stroke-linecap: round; }
     .mapa .rota-f { fill: none; stroke: var(--laranja); stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 5px rgba(242,154,56,.8)); }
-    .mapa .lancha { position: absolute; left: 0; top: 0; width: 52px; margin: -13px 0 0 -26px; will-change: transform; filter: drop-shadow(0 4px 5px rgba(0,0,0,.4)); }
-    .mapa .lancha svg { display: block; width: 100%; height: auto; }
+    .mapa .lancha { position: absolute; left: 0; top: 0; width: 42px; height: 42px; margin: -21px 0 0 -21px; will-change: transform; filter: drop-shadow(0 4px 6px rgba(0,0,0,.45)); }
+    .mapa .lancha svg, .mapa .lancha img { display: block; width: 100%; height: 100%; border-radius: 50%; border: 2px solid #fff; }
     .pn { position: absolute; width: 0; height: 0; }
     .pn::before { content: ""; position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--pinho); border: 3px solid var(--pessego); transition: background-color .4s var(--ease), transform .4s var(--spring); }
     .pn.on::before { background: var(--laranja); border-color: #fff; transform: scale(1.25); }
@@ -323,9 +355,12 @@
     .p-step { padding: 18px 0; border-top: 1px solid var(--linha); }
     .p-label { display: block; font-weight: 700; font-size: 13.5px; color: var(--cinza); margin-bottom: 12px; }
     .p-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .p-opts button { min-height: 50px; padding: 10px 6px; border-radius: 14px; border: 1.5px solid var(--linha); background: #fff; font-weight: 700; font-size: 14px; transition: border-color 220ms var(--ease), background-color 220ms var(--ease), transform 220ms var(--spring); }
+    .p-opts button { min-height: 50px; padding: 10px 6px; border-radius: 14px; border: 1.5px solid var(--linha); background: #fff; font-weight: 700; font-size: 13.5px; line-height: 1.15; transition: border-color 220ms var(--ease), background-color 220ms var(--ease), transform 220ms var(--spring); }
+    @media (max-width: 375px) { .p-opts { grid-template-columns: repeat(2, 1fr); } }
     .p-opts button:active { transform: scale(0.96); }
     .p-opts button[aria-checked="true"] { border-color: var(--mar); background: var(--nevoa); box-shadow: inset 0 0 0 1px var(--mar); color: var(--pinho); }
+    .p-limit-note { margin-top: 10px; padding: 8px 12px; border-radius: 10px; font-size: 13px; font-weight: 700; color: var(--pinho); background: var(--nevoa); border-left: 3px solid var(--laranja); transition: background-color 200ms, color 200ms; }
+    .p-limit-note.at-max { background: rgba(212, 90, 44, 0.14); color: var(--coral-2); border-left-color: var(--coral); }
     .counter { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
     .counter + .counter { border-top: 1px dashed var(--linha); }
     .counter b small { display: block; font-weight: 500; font-size: 12px; color: var(--cinza); }
@@ -461,7 +496,10 @@
 
   <div class="nav-wrap" id="navWrap">
     <nav class="nav" aria-label="Navegação">
-      <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, início"><img src="img/logo-refugio-420.webp" srcset="img/logo-refugio-420.webp 420w, img/logo-refugio-840.webp 840w" sizes="190px" width="183" height="30" alt=""></a>
+      <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, início">
+        <img class="logo-round" src="img/logo-refugio-round-96.webp" srcset="img/logo-refugio-round-96.webp 96w, img/logo-refugio-round-192.webp 192w, img/logo-refugio-round-384.webp 384w" sizes="38px" width="38" height="38" alt="Lancha Ilhabela Refúgio">
+        <span class="logo-wm"><small>Ilhabela</small>Refúgio</span>
+      </a>
       <div class="nav-links">
         <a href="#passeio">O Passeio</a>
         <a href="#reservar">Monte seu Passeio</a>
@@ -507,7 +545,7 @@
           <g class="sea-w"><path d="M-120 250 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"/></g>
           <g class="sea-w2"><path d="M-120 272 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="rgba(166,240,222,.35)" stroke-width="2"/></g>
         </svg>
-        <div class="scene-boat" id="sceneBoat"><svg viewBox="0 0 120 56"><use href="#boat"/></svg></div>
+        <div class="scene-boat" id="sceneBoat"><img src="img/logo-refugio-round-96.webp" srcset="img/logo-refugio-round-96.webp 96w, img/logo-refugio-round-192.webp 192w, img/logo-refugio-round-384.webp 384w" sizes="58px" width="58" height="58" alt=""></div>
       </div>
       <div class="wrap">
         <div class="gauges">
@@ -534,7 +572,7 @@
                 <path class="rota-b" d="M 120 466 C 124 424 168 408 172 350 C 176 290 136 262 150 205 C 166 150 138 128 156 70"/><path class="rota-f" d="M 120 466 C 124 424 168 408 172 350 C 176 290 136 262 150 205 C 166 150 138 128 156 70"/>
               </svg>
               <span class="lbl-ilha" aria-hidden="true">Ilhabela</span>
-              <div class="lancha" aria-hidden="true"><svg viewBox="0 0 120 56"><use href="#boat"/></svg></div>
+              <div class="lancha" aria-hidden="true"><img src="img/logo-refugio-round-96.webp" srcset="img/logo-refugio-round-96.webp 96w, img/logo-refugio-round-192.webp 192w, img/logo-refugio-round-384.webp 384w" sizes="42px" width="42" height="42" alt=""></div>
               <div class="pn start" data-f="0"><div class="t">Saco da Capela<small>embarque</small></div></div><div class="pn " data-f="0.36"><div class="t">Praia da Fome<small>mergulho em água verde</small></div></div><div class="pn " data-f="0.7"><div class="t">Jabaquara<small>parada para banho</small></div></div><div class="pn end" data-f="1"><div class="t">Churrasco a bordo<small>feito pelo marinheiro</small></div></div>
             </div>
           </div>
@@ -560,6 +598,17 @@
                   <button type="button" role="radio" aria-checked="true" data-v="passeio">Passeio</button>
                   <button type="button" role="radio" aria-checked="false" data-v="festa">Festa</button>
                   <button type="button" role="radio" aria-checked="false" data-v="despedida">Despedida</button>
+                </div>
+              </div>
+              <div class="p-step">
+                <span class="p-label">Roteiro / Destino</span>
+                <div class="p-opts" role="radiogroup" id="pDestino" aria-label="Destino do passeio">
+                  <button type="button" role="radio" aria-checked="true" data-d="Praia da Fome">Praia da Fome</button>
+                  <button type="button" role="radio" aria-checked="false" data-d="Jabaquara">Jabaquara</button>
+                  <button type="button" role="radio" aria-checked="false" data-d="Eustáquio">Eustáquio</button>
+                  <button type="button" role="radio" aria-checked="false" data-d="Castelhanos">Castelhanos</button>
+                  <button type="button" role="radio" aria-checked="false" data-d="Bonete">Bonete</button>
+                  <button type="button" role="radio" aria-checked="false" data-d="Indaiaúba">Indaiaúba</button>
                 </div>
               </div>
               <div class="p-step">
@@ -594,6 +643,7 @@
                     <button type="button" data-c="pets" data-d="1" aria-label="Mais um cachorro">+</button>
                   </div>
                 </div>
+                <p class="p-limit-note" id="pLimiteAviso" role="status" aria-live="polite">limite de 12 pessoas a bordo</p>
               </div>
             </div>
           </div>
@@ -727,7 +777,10 @@
     <div class="wrap">
       <div class="foot">
         <div>
-          <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, voltar ao topo"><img src="img/logo-refugio-420.webp" srcset="img/logo-refugio-420.webp 420w, img/logo-refugio-840.webp 840w" sizes="190px" width="183" height="30" alt=""></a>
+          <a href="#topo" class="logo" aria-label="Lancha Ilhabela Refúgio, voltar ao topo">
+            <img class="logo-round" src="img/logo-refugio-round-192.webp" srcset="img/logo-refugio-round-96.webp 96w, img/logo-refugio-round-192.webp 192w, img/logo-refugio-round-384.webp 384w" sizes="58px" width="58" height="58" alt="Lancha Ilhabela Refúgio">
+            <span class="logo-wm"><small>Ilhabela</small>Refúgio</span>
+          </a>
           <p style="margin-top:10px;max-width:30ch">Passeio de lancha privativo em Ilhabela, saindo do Saco da Capela.</p>
         </div>
         <div>
@@ -793,35 +846,80 @@
 
       /* Simulador */
       const TIPO = { passeio: 'um passeio de lancha', festa: 'uma festa a bordo da lancha', despedida: 'uma despedida a bordo da lancha' };
-      const st = { tipo: 'passeio', adultos: 4, criancas: 0, pets: 0 };
-      const LIM = { adultos: [1, 30], criancas: [0, 20], pets: [0, 5] };
+      const DEST_10 = new Set(['Bonete', 'Castelhanos', 'Indaiaúba']);
+      const st = { tipo: 'passeio', destino: 'Praia da Fome', adultos: 4, criancas: 0, pets: 0 };
+      const LIM = { adultos: [1, 12], criancas: [0, 11], pets: [0, 5] };
       const OUT = { adultos: 'cAdultos', criancas: 'cCriancas', pets: 'cPets' };
       const data = $('pData');
+      const limEl = $('pLimiteAviso');
       { const h = new Date(); data.min = new Date(h - h.getTimezoneOffset() * 6e4).toISOString().slice(0, 10); }
       const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
       const lista = it => it.length > 1 ? it.slice(0, -1).join(', ') + ' e ' + it[it.length - 1] : it[0];
-      function montar() {
+      const maxPessoas = () => DEST_10.has(st.destino) ? 10 : 12;
+
+      function ajustarLimitePessoas() {
+        const mxP = maxPessoas();
+        let total = st.adultos + st.criancas;
+        if (total > mxP) {
+          let excesso = total - mxP;
+          const redCriancas = Math.min(st.criancas, excesso);
+          st.criancas -= redCriancas;
+          excesso -= redCriancas;
+          if (excesso > 0) st.adultos = Math.max(1, st.adultos - excesso);
+          return true;
+        }
+        return false;
+      }
+
+      function montar(reduziuAuto = false) {
+        const mxP = maxPessoas();
+        const totalPessoas = st.adultos + st.criancas;
         const quem = [plural(st.adultos, 'adulto', 'adultos')];
         if (st.criancas) quem.push(plural(st.criancas, 'criança', 'crianças'));
         if (st.pets) quem.push(plural(st.pets, 'cachorro', 'cachorros'));
         let dia = '';
         if (data.value) { const [, m, d] = data.value.split('-'); dia = ` no dia ${d}/${m}`; }
-        const msg = `Olá, tudo bem? Estou com ${lista(quem)} e queria marcar ${TIPO[st.tipo]} em Ilhabela${dia}. Tem disponibilidade?`;
+        const msg = `Olá, tudo bem? Estou com ${lista(quem)} e queria marcar ${TIPO[st.tipo]} para ${st.destino} em Ilhabela${dia}. Tem disponibilidade?`;
         Object.keys(OUT).forEach(k => { $(OUT[k]).textContent = st[k]; });
         document.querySelectorAll('.stepper button').forEach(b => {
-          const [mn, mx] = LIM[b.dataset.c];
-          b.disabled = Number(b.dataset.d) < 0 ? st[b.dataset.c] <= mn : st[b.dataset.c] >= mx;
+          const c = b.dataset.c;
+          const [mn, mx] = LIM[c];
+          const isPlus = Number(b.dataset.d) > 0;
+          if (!isPlus) {
+            b.disabled = st[c] <= mn;
+          } else if (c === 'adultos' || c === 'criancas') {
+            b.disabled = totalPessoas >= mxP || st[c] >= mx;
+          } else {
+            b.disabled = st[c] >= mx;
+          }
         });
         document.querySelectorAll('#pTipo button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.v === st.tipo)));
+        document.querySelectorAll('#pDestino button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.d === st.destino)));
+        if (limEl) {
+          const baseTxt = DEST_10.has(st.destino)
+            ? 'Bonete, Castelhanos e Indaiaúba: limite de 10 pessoas'
+            : 'limite de 12 pessoas a bordo';
+          limEl.textContent = reduziuAuto ? `${baseTxt} (ajustado para ${mxP})` : `${baseTxt} (${totalPessoas}/${mxP})`;
+          limEl.classList.toggle('at-max', totalPessoas >= mxP);
+        }
         $('pResumo').textContent = msg;
         $('pCta').href = 'https://wa.me/5511976442448?text=' + encodeURIComponent(msg);
       }
       document.querySelectorAll('#pTipo button').forEach(b => b.addEventListener('click', () => { st.tipo = b.dataset.v; montar(); }));
+      document.querySelectorAll('#pDestino button').forEach(b => b.addEventListener('click', () => {
+        st.destino = b.dataset.d;
+        const reduziu = ajustarLimitePessoas();
+        montar(reduziu);
+      }));
       document.querySelectorAll('.stepper button').forEach(b => b.addEventListener('click', () => {
-        const [mn, mx] = LIM[b.dataset.c];
-        st[b.dataset.c] = Math.min(mx, Math.max(mn, st[b.dataset.c] + Number(b.dataset.d)));
+        const c = b.dataset.c;
+        const d = Number(b.dataset.d);
+        const [mn, mx] = LIM[c];
+        const mxP = maxPessoas();
+        if ((c === 'adultos' || c === 'criancas') && d > 0 && (st.adultos + st.criancas) >= mxP) return;
+        st[c] = Math.min(mx, Math.max(mn, st[c] + d));
         montar();
-        const o = $(OUT[b.dataset.c]);
+        const o = $(OUT[c]);
         o.classList.remove('bump'); void o.offsetWidth; o.classList.add('bump');
       }));
       data.addEventListener('change', montar);
@@ -868,7 +966,7 @@
         const p = rm ? 1 : Math.min(1, Math.max(0, (vh * 0.8 - r.top) / (r.height * 0.9)));
         const a = base.getPointAtLength(L * p), b0 = base.getPointAtLength(Math.max(0, L * p - 2)), b1 = base.getPointAtLength(Math.min(L, L * p + 2));
         const ang = Math.atan2(b1.y - b0.y, b1.x - b0.x) * 180 / Math.PI, k = w / vb.width;
-        barco.style.transform = `translate(${a.x * k}px, ${a.y * k}px) rotate(${ang}deg)`;
+        barco.style.transform = `translate(${a.x * k}px, ${a.y * k}px)`;
         feito.style.strokeDashoffset = L * (1 - p);
         pts.forEach(q => q.el.classList.toggle('on', p >= q.f - 0.01));
         const sr = scene.getBoundingClientRect(), sp = rm ? 0.5 : Math.min(1, Math.max(0, (vh - sr.top) / (vh + sr.height)));
