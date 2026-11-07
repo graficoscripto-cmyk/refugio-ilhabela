@@ -162,8 +162,8 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "TouristTrip",
-                "name": "Roteiro Saco do Eustáquio (até 12 pessoas)",
-                "description": "Passeio de lancha privativo até a enseada preservada do Saco do Eustáquio em Ilhabela, com churrasco a bordo e cabine cama de casal."
+                "name": "Roteiro Saco do Eustáquio (até 10 pessoas)",
+                "description": "Passeio de lancha privativo até a enseada preservada do Saco do Eustáquio em Ilhabela, com churrasco a bordo e cabine cama de casal (limite de 10 passageiros)."
               }
             },
             {
@@ -190,7 +190,7 @@
         "@id": "https://lancharefugio.com.br/#faq",
         "mainEntity": [
           { "@type": "Question", "name": "O passeio de lancha é privativo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Lancha Refúgio Ilhabela sai só com o seu grupo, do Saco da Capela, em Ilhabela." } },
-          { "@type": "Question", "name": "Posso levar crianças?", "acceptedAnswer": { "@type": "Answer", "text": "Pode. A lancha tem cabine com cama de casal para as crianças descansarem. O limite é de 12 pessoas a bordo (10 para Bonete, Castelhanos e Indaiaúba), contando adultos e crianças." } },
+          { "@type": "Question", "name": "Posso levar crianças?", "acceptedAnswer": { "@type": "Answer", "text": "Pode. A lancha tem cabine com cama de casal para as crianças descansarem. O limite é de 12 pessoas a bordo (10 para Bonete, Castelhanos, Eustáquio e Indaiaúba), contando adultos e crianças." } },
           { "@type": "Question", "name": "Tem churrasco a bordo?", "acceptedAnswer": { "@type": "Answer", "text": "Uma experiência para saborear sem pressa, com o mar como cenário! Você leva suas bebidas e os alimentos de sua preferência, e nós cuidamos do preparo do churrasco. Cortesias inclusas: 20 litros de gelo filtrado, cooler de 100 litros, água mineral, pratos, copos, taças e talheres. Você traz os sabores. Nós cuidamos de transformar o dia em uma experiência inesquecível!" } },
           { "@type": "Question", "name": "Como faço para reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Monte o passeio no site e chame no WhatsApp (11) 97644-2448. O atendimento é 24 horas." } }
         ]
@@ -763,7 +763,7 @@
         <div class="dest" id="destinos">
           <div class="head">
             <span class="eyebrow reveal">Praias e destinos</span>
-            <h2 class="h2 split">Escolha o seu <span class="serif">lugar a bordo.</span></h2>
+            <h2 class="h2 split">Escolha seu <span class="serif">refúgio a bordo.</span></h2>
           </div>
           <div class="dgrid reveal" role="list" aria-label="Destinos do passeio">
           <article class="dcard" role="listitem" data-dest="Jabaquara">
@@ -786,7 +786,7 @@
           </article>
           <article class="dcard" role="listitem" data-dest="Eustáquio">
             <div class="dmedia dnone" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="dnG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#006DA6"/><stop offset="1" stop-color="#042F4B"/></linearGradient></defs><rect width="400" height="500" fill="url(#dnG)"/><circle cx="270" cy="150" r="46" fill="#FFD15C" opacity=".88"/><path d="M-10 300 L90 230 L170 280 L260 210 L410 300 V500 H-10Z" fill="#00507D"/><path d="M-10 360 C80 335 140 380 220 360 S350 340 410 362 V500 H-10Z" fill="#02A1A3" opacity=".85"/></svg><span class="dsoon">foto em breve</span></div>
-            <span class="dlim">até 12 pessoas</span>
+            <span class="dlim">até 10 pessoas</span>
             <div class="dbody">
               <h3>Eustáquio</h3>
               <p>Praia reservada no litoral da ilha.</p>
@@ -961,7 +961,7 @@
         </div>
         <div class="faq">
           <details class="reveal"><summary>O passeio é privativo?</summary><p>Sim. A lancha sai só com o seu grupo.</p></details>
-          <details class="reveal"><summary>Posso levar criança?</summary><p>Pode. Tem cabine com cama de casal pras crianças descansarem. Limite de 12 pessoas a bordo (10 em Bonete, Castelhanos e Indaiaúba), contando as crianças.</p></details>
+          <details class="reveal"><summary>Posso levar criança?</summary><p>Pode. Tem cabine com cama de casal pras crianças descansarem. Limite de 12 pessoas a bordo (10 em Bonete, Castelhanos, Eustáquio e Indaiaúba), contando as crianças.</p></details>
           <details class="reveal"><summary>Tem churrasco a bordo?</summary><p>Uma experiência para saborear sem pressa, com o mar como cenário! Você leva suas bebidas e os alimentos de sua preferência, e nós cuidamos do preparo do churrasco. Cortesias inclusas: 20 litros de gelo filtrado, cooler de 100 litros, água mineral, pratos, copos, taças e talheres. Você traz os sabores. Nós cuidamos de transformar o dia em uma experiência inesquecível!</p></details>
           <details class="reveal"><summary>Como reservo?</summary><p>Monte o passeio aqui no site e chame no WhatsApp. Atendimento 24h.</p></details>
         </div>
@@ -1079,7 +1079,7 @@
 
       /* Simulador */
       const TIPO = { passeio: 'um passeio de lancha', churrasco: 'um passeio de lancha com Churrasco a Bordo', festa: 'uma festa a bordo da lancha', despedida: 'uma despedida a bordo da lancha' };
-      const DEST_10 = new Set(['Bonete', 'Castelhanos', 'Indaiaúba']);
+      const DEST_10 = new Set(['Bonete', 'Castelhanos', 'Eustáquio', 'Indaiaúba']);
       const st = { tipo: 'passeio', destino: 'Jabaquara', adultos: 4, criancas: 0 };
       const LIM = { adultos: [1, 12], criancas: [0, 11] };
       const OUT = { adultos: 'cAdultos', criancas: 'cCriancas' };
@@ -1129,7 +1129,7 @@
         document.querySelectorAll('#pDestino button').forEach(b => b.setAttribute('aria-checked', String(b.dataset.d === st.destino)));
         if (limEl) {
           const baseTxt = DEST_10.has(st.destino)
-            ? 'Bonete, Castelhanos e Indaiaúba: limite de 10 pessoas'
+            ? 'Bonete, Castelhanos, Eustáquio e Indaiaúba: limite de 10 pessoas'
             : 'limite de 12 pessoas a bordo';
           limEl.textContent = reduziuAuto ? `${baseTxt} (ajustado para ${mxP})` : `${baseTxt} (${totalPessoas}/${mxP})`;
           limEl.classList.toggle('at-max', totalPessoas >= mxP);
