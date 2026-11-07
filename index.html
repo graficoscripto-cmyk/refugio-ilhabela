@@ -468,14 +468,16 @@
     @keyframes caustic { to { background-position: 180px 140px, -220px 170px, 150px -120px; } }
 
     /* ===== Monte seu passeio ===== */
-    .planner { margin-top: 72px; border-radius: 30px; background: var(--nevoa-2); color: var(--tinta); padding: 30px 20px; box-shadow: 0 40px 80px -40px rgba(4, 47, 75, 0.7); }
+    .planner { margin-top: 72px; border-radius: 30px; background: var(--nevoa-2); color: var(--tinta); padding: 30px 20px; box-shadow: 0 40px 80px -40px rgba(4, 47, 75, 0.7); overflow: hidden; }
     @media (min-width: 768px) { .planner { margin-top: 104px; padding: 44px; } }
     .planner h3 { font-size: clamp(28px, 6.4vw, 40px); color: var(--pinho); margin: 10px 0 8px; }
-    @media (min-width: 960px) { .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; } }
-    .p-step { padding: 18px 0; border-top: 1px solid var(--linha); }
+    .p-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+    @media (min-width: 960px) { .p-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 48px; } }
+    .p-grid > div { min-width: 0; max-width: 100%; }
+    .p-step { padding: 18px 0; border-top: 1px solid var(--linha); min-width: 0; max-width: 100%; overflow: hidden; }
     .p-label { display: block; font-weight: 700; font-size: 13.5px; color: var(--cinza); margin-bottom: 12px; }
-    .p-opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    @media (min-width: 540px) { .p-opts { grid-template-columns: repeat(4, 1fr); } #pDestino.p-opts { grid-template-columns: repeat(3, 1fr); } }
+    .p-opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    @media (min-width: 540px) { .p-opts { grid-template-columns: repeat(4, minmax(0, 1fr)); } #pDestino.p-opts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .p-opts button { min-height: 50px; padding: 10px 6px; border-radius: 14px; border: 1.5px solid var(--linha); background: #fff; font-weight: 700; font-size: 13.5px; line-height: 1.15; transition: border-color 220ms var(--ease), background-color 220ms var(--ease), transform 220ms var(--spring); }
     .p-opts button:active { transform: scale(0.96); }
     .p-opts button[aria-checked="true"] { border-color: var(--pinho-3); background: var(--nevoa); box-shadow: inset 0 0 0 1px var(--pinho-3); color: var(--pinho); }
@@ -506,8 +508,20 @@
     }
     .bbq-badge svg { width: 16px; height: 16px; color: var(--laranja); }
     .bbq-card h3 { font-size: clamp(28px, 6.8vw, 44px); color: #fff; margin: 14px 0 8px; }
-    .bbq-sub { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 600; font-size: clamp(20px, 4.8vw, 26px); color: var(--pessego); line-height: 1.25; margin-bottom: 16px; }
-    .bbq-text p { font-size: 15.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.9); margin-bottom: 12px; }
+    .bbq-sub { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 600; font-size: clamp(20px, 4.8vw, 26px); color: var(--pessego); line-height: 1.25; margin-bottom: 12px; }
+    .bbq-text p { font-size: 15.5px; line-height: 1.55; color: rgba(255, 255, 255, 0.9); margin-bottom: 14px; }
+    .bbq-more-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 44px; padding: 8px 18px;
+      border-radius: 999px; font-weight: 700; font-size: 14px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 209, 92, 0.45);
+      color: var(--pessego);
+      transition: transform 220ms var(--spring), background-color 220ms var(--ease);
+    }
+    .bbq-more-btn:hover { background: rgba(255, 255, 255, 0.16); }
+    .bbq-more-btn:active { transform: scale(0.97); }
+    .bbq-more-btn svg { width: 16px; height: 16px; color: var(--laranja); }
     .bbq-box {
       margin-top: 24px;
       background: rgba(4, 47, 75, 0.65);
@@ -523,9 +537,48 @@
     .bbq-list { list-style: none; display: grid; gap: 12px; margin-bottom: 22px; }
     .bbq-list li { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15.5px; color: #fff; }
     .bbq-list svg { flex: none; width: 20px; height: 20px; color: var(--laranja); }
-    .bbq-closing { font-size: 14.5px; line-height: 1.5; color: rgba(255, 255, 255, 0.86); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px; }
-    .bbq-closing strong { display: block; color: var(--pessego); margin-top: 6px; font-weight: 700; }
     .bbq-card .btn { width: 100%; }
+
+    /* ===== Modal Churrasco a Bordo (anima só transform/opacity) ===== */
+    .bbq-modal-backdrop {
+      position: fixed; inset: 0; z-index: 120;
+      display: grid; place-items: center; padding: 20px;
+      background: rgba(4, 47, 75, 0.78);
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      opacity: 0; pointer-events: none;
+      transition: opacity 260ms var(--ease);
+    }
+    .bbq-modal-backdrop.open { opacity: 1; pointer-events: auto; }
+    .bbq-modal {
+      width: 100%; max-width: 540px; max-height: 88svh; overflow-y: auto;
+      border-radius: 26px; padding: 28px 22px;
+      background: linear-gradient(155deg, #00507D 0%, #042F4B 100%);
+      border: 1.5px solid rgba(255, 209, 92, 0.45);
+      color: #fff;
+      box-shadow: 0 32px 64px -20px rgba(4, 47, 75, 0.95);
+      transform: translateY(18px) scale(0.96);
+      opacity: 0;
+      transition: transform 320ms var(--spring), opacity 260ms var(--ease);
+    }
+    @media (min-width: 600px) { .bbq-modal { padding: 34px 32px; } }
+    .bbq-modal-backdrop.open .bbq-modal { transform: translateY(0) scale(1); opacity: 1; }
+    .bbq-modal-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    .bbq-modal-top h3 { font-size: clamp(24px, 6vw, 32px); color: #fff; }
+    .bbq-modal-close {
+      width: 44px; height: 44px; border-radius: 50%; flex: none;
+      display: grid; place-items: center;
+      background: rgba(255, 255, 255, 0.12); color: #fff;
+      font-size: 22px; font-weight: 700;
+      transition: transform 200ms var(--spring), background-color 200ms var(--ease);
+    }
+    .bbq-modal-close:hover { background: rgba(255, 255, 255, 0.2); }
+    .bbq-modal-close:active { transform: scale(0.92); }
+    .bbq-modal p { font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.92); margin-bottom: 12px; }
+    .bbq-modal .bbq-list { margin: 14px 0 18px; padding: 16px; border-radius: 18px; background: rgba(4, 47, 75, 0.55); border: 1px solid rgba(255, 255, 255, 0.12); }
+    .bbq-modal .bbq-closing { font-size: 14.5px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; }
+    .bbq-modal .bbq-closing strong { display: block; color: var(--pessego); margin-top: 6px; }
+    .bbq-modal .btn { width: 100%; }
+
     .p-limit-note { margin-top: 10px; padding: 8px 12px; border-radius: 10px; font-size: 13px; font-weight: 700; color: var(--pinho); background: var(--nevoa); border-left: 3px solid var(--laranja); transition: background-color 200ms, color 200ms; }
     .p-limit-note.at-max { background: rgba(247, 181, 0, 0.22); color: #8A5300; border-left-color: #F68330; }
     .counter { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
@@ -538,7 +591,26 @@
     .stepper output { min-width: 26px; text-align: center; font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; display: inline-block; }
     .stepper output.bump { animation: bump 320ms var(--spring); }
     @keyframes bump { 40% { transform: scale(1.35); color: var(--pinho-3); } }
-    input[type=date] { font: inherit; font-size: 16px; min-height: 50px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--linha); background: #fff; width: 100%; color: var(--tinta); }
+    .date-wrap { width: 100%; max-width: 100%; min-width: 0; overflow: hidden; }
+    input[type=date] {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      font: inherit;
+      font-size: 16px;
+      min-height: 50px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1.5px solid var(--linha);
+      background: #fff;
+      color: var(--tinta);
+      margin: 0;
+    }
+    input[type=date]::-webkit-date-and-time-value { text-align: left; }
     .p-summary { margin: 12px 0 18px; padding: 16px 18px; border-radius: 16px; background: var(--nevoa); color: var(--pinho); font-size: 14.5px; border-left: 3px solid var(--pinho-3); }
     .planner .btn { width: 100%; }
 
@@ -577,7 +649,21 @@
     .faq summary::-webkit-details-marker { display: none; }
     .faq summary::after { content: "+"; flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--laranja); color: #042F4B; font-weight: 800; font-size: 22px; transition: transform 400ms var(--spring); }
     .faq details[open] summary::after { transform: rotate(45deg); }
-    .faq details p { padding: 0 0 20px; color: var(--cinza); font-size: 15.5px; }
+    .faq details p { padding: 0 0 14px; color: var(--cinza); font-size: 15.5px; }
+    .faq-body { padding: 0 0 20px; color: var(--cinza); font-size: 15.5px; }
+    .faq-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+    .faq-chips li { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--linha); color: var(--pinho); font-weight: 700; font-size: 13.5px; }
+    .faq-chips svg { width: 15px; height: 15px; color: var(--pinho-3); flex: none; }
+    .faq-more-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 44px; padding: 8px 16px;
+      border-radius: 999px; font-weight: 700; font-size: 14px;
+      background: var(--pinho); color: #fff;
+      transition: transform 220ms var(--spring), background-color 220ms var(--ease);
+    }
+    .faq-more-btn:hover { background: var(--pinho-2); }
+    .faq-more-btn:active { transform: scale(0.97); }
+    .faq-more-btn svg { width: 16px; height: 16px; color: var(--laranja); }
 
     /* ===== Embarque ===== */
     .where-sec { background: var(--nevoa); padding-top: 0; }
@@ -758,7 +844,7 @@
           <div>
             <div class="head">
               <span class="eyebrow reveal">O passeio</span>
-              <h2 class="h2 split">A lancha é toda <span class="serif">de vocês.</span></h2>
+              <h2 class="h2 split">Mais que um passeio. <span class="serif">Uma experiência a bordo.</span></h2>
             </div>
 <div class="mapa reveal" id="mapa" role="img" aria-label="Rota ilustrada do passeio: Saco da Capela, Jabaquara, Praia da Fome e churrasco a bordo">
               <svg class="ms" viewBox="0 0 360 520" aria-hidden="true">
@@ -856,8 +942,11 @@
               <span class="bbq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-3.6 2.4-4.6.3 1.6 1.1 2.6 2.1 2.6 0-3 .5-5.6.5-8z"/></svg>Experiência Exclusiva</span>
               <h3>Churrasco a Bordo</h3>
               <p class="bbq-sub">Uma experiência para saborear sem pressa, com o mar como cenário!</p>
-              <p>Aproveite um dia especial a bordo, reunindo amigos e família para um delicioso churrasco preparado pelo nosso churrasqueiro, enquanto você contempla as belezas de Ilhabela.</p>
-              <p>Você leva suas bebidas e os alimentos de sua preferência, e nós cuidamos do preparo do churrasco para tornar seu passeio ainda mais especial.</p>
+              <p>Você leva suas bebidas e os alimentos de sua preferência, e nosso churrasqueiro cuida de todo o preparo a bordo.</p>
+              <button type="button" class="bbq-more-btn" data-open-bbq aria-haspopup="dialog" aria-controls="bbqModal">
+                Ver detalhes
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
             </div>
             <div class="bbq-box">
               <h4>Cortesias inclusas:</h4>
@@ -867,10 +956,6 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Água mineral;</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pratos, copos, taças e talheres.</li>
               </ul>
-              <div class="bbq-closing">
-                Navegue, mergulhe, relaxe e aproveite bons momentos com conforto, praticidade e liberdade.
-                <strong>Você traz os sabores. Nós cuidamos de transformar o dia em uma experiência inesquecível!</strong>
-              </div>
               <a class="btn" href="https://wa.me/5511976442448?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Quero%20saber%20mais%20e%20reservar%20o%20passeio%20com%20Churrasco%20a%20Bordo%20na%20Lancha%20Ref%C3%BAgio%20Ilhabela!" target="_blank" rel="noopener">
                 Reservar Churrasco a Bordo
                 <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></span>
@@ -907,7 +992,9 @@
               </div>
               <div class="p-step">
                 <label class="p-label" for="pData">Data (opcional)</label>
-                <input type="date" id="pData">
+                <div class="date-wrap">
+                  <input type="date" id="pData">
+                </div>
               </div>
             </div>
             <div>
@@ -1016,7 +1103,22 @@
         <div class="faq">
           <details class="reveal"><summary>O passeio é privativo?</summary><p>Sim. A lancha sai só com o seu grupo.</p></details>
           <details class="reveal"><summary>Posso levar criança?</summary><p>Pode. Tem cabine com cama de casal pras crianças descansarem. Limite de 12 pessoas a bordo (10 em Bonete, Castelhanos e Indaiaúba), contando as crianças.</p></details>
-          <details class="reveal"><summary>Tem churrasco a bordo?</summary><p>Sim! Você leva suas bebidas e os alimentos de sua preferência, e nosso churrasqueiro cuida do preparo do churrasco a bordo. Cortesias inclusas: 20 litros de gelo filtrado, cooler de 100 litros, água mineral, pratos, copos, taças e talheres.</p></details>
+          <details class="reveal">
+            <summary>Churrasco a Bordo</summary>
+            <div class="faq-body">
+              <p>Uma experiência para saborear sem pressa, com o mar como cenário! Você leva bebidas e alimentos e nós cuidamos do preparo.</p>
+              <ul class="faq-chips">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gelo filtrado 20 L</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cooler 100 L</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Água mineral</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pratos, copos, taças e talheres</li>
+              </ul>
+              <button type="button" class="faq-more-btn" data-open-bbq aria-haspopup="dialog" aria-controls="bbqModal">
+                Ver detalhes
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </details>
           <details class="reveal"><summary>Como reservo?</summary><p>Monte o passeio aqui no site e chame no WhatsApp. Atendimento 24h.</p></details>
         </div>
       </div>
@@ -1082,6 +1184,36 @@
       <div class="copy">© <span id="ano">2026</span> Lancha Refúgio Ilhabela · Atendimento 24h</div>
     </div>
   </footer>
+
+  <!-- Modal de detalhes completos do Churrasco a Bordo -->
+  <div class="bbq-modal-backdrop" id="bbqModal" role="dialog" aria-modal="true" aria-labelledby="bbqModalTitle" aria-hidden="true">
+    <div class="bbq-modal">
+      <div class="bbq-modal-top">
+        <div>
+          <span class="bbq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-3.6 2.4-4.6.3 1.6 1.1 2.6 2.1 2.6 0-3 .5-5.6.5-8z"/></svg>Churrasco a Bordo</span>
+          <h3 id="bbqModalTitle" style="margin-top:10px">Uma experiência para saborear sem pressa, com o mar como cenário!</h3>
+        </div>
+        <button type="button" class="bbq-modal-close" id="bbqModalClose" aria-label="Fechar detalhes">×</button>
+      </div>
+      <p>Aproveite um dia especial a bordo, reunindo amigos e família para um delicioso churrasco preparado pelo nosso churrasqueiro, enquanto você contempla as belezas de Ilhabela.</p>
+      <p>Você leva suas bebidas e os alimentos de sua preferência, e nós cuidamos do preparo do churrasco para tornar seu passeio ainda mais especial.</p>
+      <h4 style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--laranja);font-weight:800;margin-top:14px">Cortesias inclusas:</h4>
+      <ul class="bbq-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>20 litros de gelo filtrado;</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cooler de 100 litros;</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Água mineral;</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pratos, copos, taças e talheres.</li>
+      </ul>
+      <div class="bbq-closing">
+        Navegue, mergulhe, relaxe e aproveite bons momentos com conforto, praticidade e liberdade.
+        <strong>Você traz os sabores. Nós cuidamos de transformar o dia em uma experiência inesquecível!</strong>
+      </div>
+      <a class="btn" href="https://wa.me/5511976442448?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Quero%20saber%20mais%20e%20reservar%20o%20passeio%20com%20Churrasco%20a%20Bordo%20na%20Lancha%20Ref%C3%BAgio%20Ilhabela!" target="_blank" rel="noopener">
+        Reservar Churrasco a Bordo
+        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></span>
+      </a>
+    </div>
+  </div>
 
   <a class="wa-fab" id="waFab" href="https://wa.me/5511976442448" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
@@ -1258,6 +1390,25 @@
         const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
         $('reservar').scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
       }));
+
+      /* Modal Churrasco a Bordo (Ver detalhes) */
+      const bbqModal = $('bbqModal'), bbqClose = $('bbqModalClose');
+      const openBbqModal = () => {
+        if (!bbqModal) return;
+        bbqModal.classList.add('open');
+        bbqModal.setAttribute('aria-hidden', 'false');
+      };
+      const closeBbqModal = () => {
+        if (!bbqModal) return;
+        bbqModal.classList.remove('open');
+        bbqModal.setAttribute('aria-hidden', 'true');
+      };
+      document.querySelectorAll('[data-open-bbq]').forEach(btn => btn.addEventListener('click', openBbqModal));
+      if (bbqClose) bbqClose.addEventListener('click', closeBbqModal);
+      if (bbqModal) {
+        bbqModal.addEventListener('click', e => { if (e.target === bbqModal) closeBbqModal(); });
+        window.addEventListener('keydown', e => { if (e.key === 'Escape' && bbqModal.classList.contains('open')) closeBbqModal(); });
+      }
 
       /* Bolinha do WhatsApp: aparece fora do hero e do simulador */
       const fab = $('waFab'), vis = new Set();
