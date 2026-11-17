@@ -22,16 +22,16 @@
 
 ### 1.3. Descrição Otimizada para SEO Local & GEO (718 caracteres)
 ```text
-Lancha Refúgio Ilhabela (@ilhabela_refugio) oferece passeios de lancha 100% privativos em Ilhabela - SP, com embarque no Saco da Capela (Av. Pedro de Paula Moraes, 253). Nossa lancha é exclusiva para a sua família ou grupo de amigos (até 12 pessoas no roteiro norte ou até 10 pessoas para Castelhanos, Bonete e Indaiaúba), equipada com cabine fechada com cama de casal para descanso das crianças, estofados macios e marinheiro experiente que prepara o churrasco a bordo durante o passeio. Fazemos roteiros para Praia do Jabaquara, Praia da Fome, Saco do Eustáquio, Praia dos Castelhanos, Praia do Bonete e Praia da Indaiaúba, além de festas e despedidas a bordo. Simule seu passeio em lancharefugio.com.br!
+Lancha Refúgio Ilhabela (@ilhabela_refugio) oferece passeios de lancha 100% privativos em Ilhabela - SP, com embarque no Saco da Capela (Av. Pedro de Paula Moraes, 253). Nossa lancha é exclusiva para a sua família ou grupo de amigos (até 12 pessoas no roteiro norte ou até 10 pessoas para Castelhanos, Bonete e Indaiaúba), equipada com cabine fechada com cama de casal para descanso das crianças, estofados macios e marinheiro experiente que prepara o churrasco a bordo durante o passeio. Fazemos roteiros para Canal Sul, Praia da Fome, Saco do Eustáquio, Praia dos Castelhanos, Praia do Bonete e Praia da Indaiaúba, além de festas e despedidas a bordo. Simule seu passeio em lancharefugio.com.br!
 ```
 
 ---
 
 ## PARTE 2 — Serviços / Produtos para cadastrar no Google Meu Negócio
 
-1. **Roteiro Norte Privativo: Jabaquara + Praia da Fome (até 12 pessoas)**
+1. **Roteiro Norte Privativo: Canal Sul + Praia da Fome (até 12 pessoas)**
    - **Categoria:** `Agência de passeios de barco`
-   - **Descrição:** `Passeio de lancha 100% privativo saindo do Saco da Capela rumo à Praia do Jabaquara e Praia da Fome em Ilhabela. Lancha com cabine cama de casal e churrasco a bordo feito pelo marinheiro. Capacidade até 12 pessoas.`
+   - **Descrição:** `Passeio de lancha 100% privativo saindo do Saco da Capela rumo à Canal Sul e Praia da Fome em Ilhabela. Lancha com cabine cama de casal e churrasco a bordo feito pelo marinheiro. Capacidade até 12 pessoas.`
    - **Link do botão:** `https://lancharefugio.com.br/#reservar`
 
 2. **Passeio de Lancha Saco do Eustáquio & Indaiaúba**
@@ -64,7 +64,7 @@ Muito obrigado e até o próximo mergulho em Ilhabela! ⚓🙌
 
 ### 3.2. Modelos de Resposta no Google (SEO Local):
 - **Modelo 1:**
-  `Muito obrigado pela avaliação! Ficamos muito felizes que tenham curtido o passeio de lancha privativo em Ilhabela saindo do Saco da Capela. Quando voltarem para conhecer Jabaquara, Praia da Fome, Indaiaúba ou Castelhanos, a Lancha Refúgio Ilhabela estará esperando vocês!`
+  `Muito obrigado pela avaliação! Ficamos muito felizes que tenham curtido o passeio de lancha privativo em Ilhabela saindo do Saco da Capela. Quando voltarem para conhecer Canal Sul, Praia da Fome, Indaiaúba ou Castelhanos, a Lancha Refúgio Ilhabela estará esperando vocês!`
 - **Modelo 2:**
   `Valeu demais pelo carinho! Nossa missão na Lancha Refúgio Ilhabela é entregar o passeio de lancha mais confortável, limpo e exclusivo de Ilhabela, com churrasco a bordo e cabine para toda a família descansar. Até a próxima!`
 
@@ -73,7 +73,7 @@ Muito obrigado e até o próximo mergulho em Ilhabela! ⚓🙌
 ## PARTE 4 — Bio do Instagram (`@ilhabela_refugio`)
 ```text
 🚤 Lancha Refúgio Ilhabela | Passeios 100% Privativos
-🏝️ Jabaquara • Praia da Fome • Eustáquio • Castelhanos • Bonete • Indaiaúba
+🏝️ Canal Sul • Praia da Fome • Eustáquio • Castelhanos • Bonete • Indaiaúba
 🥩 Churrasco a bordo + Cabine c/ cama de casal | Saco da Capela
 👇 Monte seu passeio e chame no WhatsApp:
 lancharefugio.com.br
